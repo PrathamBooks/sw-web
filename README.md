@@ -1,4 +1,4 @@
-# sw-js
+# sw-js-open
 
 This repository contains the StoryWeaver web front-end.
 
