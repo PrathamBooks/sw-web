@@ -1,0 +1,10 @@
+@import "../../scss/common";
+
+$block: "pb-slim-notification-container";
+
+.#{$block} {
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: $z-index-notification;
+}

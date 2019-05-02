@@ -1,0 +1,24 @@
+@import "../../scss/common";
+
+$block: "pb-halver";
+
+.#{$block} {
+  background-color: $c-bg-dark;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+}
+
+.#{$block}__content {
+  background: $c-white;
+  padding: $space-l;
+  width: 100%;
+
+  @include bp(medium) {
+    width: percentage(2 / 3);
+  }
+
+  @include bp(large) {
+    width: percentage(1 / 2);
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../scss/common";
+
+// .pb-translate-landing {}
+
+$block: "pb-translate-landing";
+
+.#{$block}__language-not-found-tip {
+    font-size: modular-scale(-1);
+}
+
+.#{$block}__label {
+    flex: 1;
+    font-family: $font-family-alt;
+    font-size: modular-scale(0);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-heading;
+    min-width: $size-xs;
+    padding-right: $space-m;
+    position: relative;
+    text-align: right;
+    top: $space-m + $space-s;
+}
+
+.#{$block}__select-language-wrapper {
+    align-items: center;
+    display: flex;
+}
+
+.#{$block}__select-language {
+    flex: 100%;
+}

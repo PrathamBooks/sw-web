@@ -1,0 +1,26 @@
+@import "../../scss/common";
+
+$block: "pb-section-call-to-action";
+
+.#{$block} {
+  margin-top: 0;
+  padding-left: $space-l;
+  padding-right: $space-l;
+  padding-top: $space-l;
+
+  @include bp(medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.#{$block}__link {
+  &::after {
+    content: " #{$char-right-arrow}";
+  }
+}
+
+.#{$block}--border-bottom {
+  border-bottom: $border;
+  padding-bottom: $space-l;
+}

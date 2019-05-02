@@ -1,0 +1,30 @@
+// Values are based on the breakpoints from Foundation 6.1.2
+
+// $ui-breakpoints is defined in the config/ui.config.json
+
+$breakpoints: ();
+
+@each $key, $pixels in $ui-breakpoints {
+  $screen-string: "only screen";
+
+  @if ($pixels == "0") {
+    $breakpoints: map-merge($breakpoints, ($key: "#{$screen-string}"));
+  } @else {
+    $breakpoints: map-merge($breakpoints, ($key: "#{$screen-string} and (min-width: #{($pixels / 16) * 1em})"));  }
+}
+
+@mixin breakpoint($media, $media-breakpoints: $breakpoints) {
+  @if map-has-key($media-breakpoints, $media) {
+    @media #{map-get($media-breakpoints, $media)} {
+      @content;
+    }
+  } @else {
+    @error "The breakpoint you have provided "#{$media}" is not defined in $breakpoints";
+  }
+}
+
+@mixin bp($media, $media-breakpoints: $breakpoints) {
+  @include breakpoint($media, $media-breakpoints) {
+    @content;
+  }
+}

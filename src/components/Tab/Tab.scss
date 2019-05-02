@@ -1,0 +1,27 @@
+@import "../../scss/common";
+
+.pb-tab {
+  display: none;
+  margin: 0;
+  padding: $space-l;
+}
+
+.pb-tab--no-padding {
+  padding: 0;
+}
+
+.pb-tab--active {
+  display: block;
+}
+
+.pb-tabs--fit-height {
+  position: relative;
+
+  .pb-tab {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: $height-tab-link + (strip-unit($border-width) / 16);
+  }
+}

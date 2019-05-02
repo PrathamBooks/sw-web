@@ -1,0 +1,16 @@
+@import "../../scss/common";
+
+.pb-logo,
+.pb-logo__img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pb-logo__img {
+  height: $height-logo-s;
+  max-width: 100%;
+
+  @include bp(large) {
+    height: $height-logo;
+  }
+}

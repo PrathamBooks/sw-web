@@ -1,0 +1,18 @@
+@import "../../scss/common";
+
+$block: "pb-site-footer-notice";
+
+
+.#{$block}__agree-btn {
+	background-color: $c-primary;
+	border-color: $c-primary;
+	border-radius: 3 * $border-radius-l;
+	color: $c-white;
+	margin-left: $space-s;
+
+	&:hover, &:active, &:focus {
+		background-color: $c-primary;
+		border-color: $c-primary;
+		color: $c-white;
+	}
+}

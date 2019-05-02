@@ -1,0 +1,36 @@
+@import "../../scss/common";
+
+$block: "pb-skeleton-book-card";
+
+.#{$block} {
+  position: relative;
+
+  &__wrapper {
+    background-color: $c-grey-lighter;
+    border: $border-light;
+    border-radius: $border-radius;
+    overflow: hidden;
+    padding-top: 161.8%; // Aspect ratio is 1:1.618
+    position: relative;
+  }
+
+  &__meta {
+    background-color: $c-white;
+    border-top: $border-light;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    min-height: 100% - (100% / 1.618);
+    padding: $space-s;
+    position: absolute;
+    right: 0;
+  }
+
+  &__title {
+    color: $c-text-lighter;
+    display: block;
+    font-size: modular-scale(-1);
+  }
+}
+
+// .#{$block}--modifier {}

@@ -1,0 +1,14 @@
+@mixin append-arrow-right-on-hover() {
+  &:hover,
+  &:active,
+  &:focus {
+    &::after {
+      content: "#{$char-right-arrow}";
+      margin-left: $space-m;
+    }
+  }
+}
+
+@mixin remove-tap-highlight {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

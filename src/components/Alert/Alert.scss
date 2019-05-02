@@ -1,0 +1,29 @@
+@import "../../scss/common";
+
+$block: "pb-alert";
+
+.#{$block} {
+  border: $border-width-m $border-style;
+  border-radius: $border-radius;
+  padding: $space-m;
+}
+
+.#{$block}--theme-info {
+  background-color: transparentize($c-info, $opacity-background);
+  color: $c-info;
+}
+
+.#{$block}--theme-danger {
+  background-color: transparentize($c-danger, $opacity-background);
+  color: $c-danger;
+}
+
+.#{$block}--theme-success {
+  background-color: transparentize($c-success, $opacity-background);
+  color: $c-success;
+}
+
+.#{$block}--theme-warning {
+  background-color: transparentize($c-warning, $opacity-background);
+  color: $c-warning;
+}

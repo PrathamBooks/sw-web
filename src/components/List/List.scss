@@ -1,0 +1,47 @@
+@import "../../scss/common";
+
+.pb-list {
+  list-style: none;
+  padding: 0;
+
+  > li {
+    margin: 0;
+  }
+}
+
+.pb-list__separator {
+  margin-left: $space-m;
+}
+
+.pb-list--inline {
+  display: inline-block;
+  margin-bottom: -1 * $space-m;
+  margin-right: -1 * $space-l;
+  margin-top: -1 * $space-m;
+  padding-bottom: $space-m;
+
+  > li {
+    display: inline-block;
+    left: -1 * $space-l;
+    margin-left: $space-l;
+    margin-top: $space-m;
+    position: relative;
+  }
+}
+
+.pb-list--separated {
+  > li {
+    left: -1 * $space-m;
+    margin-left: $space-m;
+  }
+}
+
+.pb-list--nowrap {
+  > li {
+    white-space: nowrap;
+  }
+}
+
+.pb-list--align-left {
+   text-align: left;
+}

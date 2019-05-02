@@ -1,0 +1,28 @@
+@import "../../scss/common";
+
+$block: "pb-breadrumb";
+
+// .#{$block} {}
+
+.#{$block}__link {
+  & + & {
+    margin-left: $space-s;
+  }
+
+  &::after {
+    content: "#{$char-right-arrow}";
+    margin-left: $space-s;
+  }
+}
+
+.#{$block}--light {
+  .#{$block}__link {
+    color: $c-white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c-white;
+    }
+  }
+}

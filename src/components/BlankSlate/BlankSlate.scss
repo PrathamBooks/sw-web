@@ -1,0 +1,28 @@
+@import "../../scss/common";
+
+$block: "pb-blank-slate";
+
+.#{$block} {
+  padding: $space-xxl $space-m;
+
+  @include bp(medium) {
+    padding-left: $space-xxl;
+    padding-right: $space-xxl;
+  }
+}
+
+.#{$block}__title,
+.#{$block}__content {
+  text-align: center;
+}
+
+.#{$block}__title {
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+}
+
+.#{$block}__graphic {
+  margin: 0 auto;
+  max-width: $size-xxl;
+  text-align: center;
+}

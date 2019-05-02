@@ -1,0 +1,49 @@
+@import "../../scss/common";
+
+.pb-caret {
+  display: inline-block;
+  height: $height-caret;
+  position: relative;
+  width: $width-caret;
+}
+
+.pb-caret--down,
+.pb-caret--left,
+.pb-caret--up,
+.pb-caret--right {
+  &::after {
+    content: " ";
+    left: 0;
+    position: absolute;
+    top: -1 * $height-caret / 4;
+  }
+}
+
+.pb-caret--left,
+.pb-caret--right {
+  top: -1 * $height-caret / 2;
+}
+
+.pb-caret--down {
+  &::after {
+    @include triangle("down", $width-caret, $height-caret, currentColor);
+  }
+}
+
+.pb-caret--left {
+  &::after {
+    @include triangle("left", $height-caret, $width-caret, currentColor);
+  }
+}
+
+.pb-caret--up {
+  &::after {
+    @include triangle("up", $width-caret, $height-caret, currentColor);
+  }
+}
+
+.pb-caret--right {
+  &::after {
+    @include triangle("right", $height-caret, $width-caret, currentColor);
+  }
+}

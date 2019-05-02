@@ -1,0 +1,53 @@
+@import "../../scss/common";
+
+$block: "pb-img-browser";
+
+.#{$block}__image-wrapper {
+  padding: 0 $size-xs;
+  position: relative;
+
+  @include bp(medium) {
+    padding-left: $size-s;
+    padding-right: $size-s;
+  }
+}
+
+.#{$block}__link {
+  margin-top: 0;
+}
+
+.#{$block}__dropdown,
+.#{$block}__link--next,
+.#{$block}__link--previous {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: $size-xs;
+
+  @include bp(medium) {
+    width: $size-s;
+  }
+}
+
+.#{$block}__link--next,
+.#{$block}__link--previous {
+  height: 100%;
+}
+
+.#{$block}__link--previous {
+  left: 0;
+}
+
+.#{$block}__link--next {
+  right: 0;
+}
+
+.#{$block}__dropdown {
+  margin-top: 0;
+  padding: 0 $space-m;
+  right: 0;
+}
+
+// .#{$block}--modifier {}

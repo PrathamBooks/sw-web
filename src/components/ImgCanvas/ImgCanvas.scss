@@ -1,0 +1,36 @@
+@import "../../scss/common";
+
+$block: "pb-canvas";
+
+.#{$block} {
+  padding-top: 75%; // Aspect Ratio 4:3
+  position: relative;
+
+  @media (orientation: landscape) {
+    padding-top: 50%; // Aspect Ratio 2:1
+  }
+}
+
+.#{$block}__wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.#{$block}__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.#{$block}__img--fit-height {
+  height: 100%;
+}
+
+.#{$block}__img--fit-width {
+  width: 100%;
+}

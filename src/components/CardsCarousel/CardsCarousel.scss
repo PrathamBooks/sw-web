@@ -1,0 +1,81 @@
+@import "../../scss/common";
+
+$block: "pb-cards-carousel";
+
+.#{$block} {
+  margin-bottom: -1 * $space-m;
+  margin-top: -1 * $space-m;
+  padding: 0 $size-xs;
+  position: relative;
+
+  @include bp(medium) {
+    padding-left: $size-s;
+    padding-right: $size-s;
+  }
+}
+
+.#{$block}__card {
+  padding: $space-m;
+}
+
+.#{$block}__link {
+  margin-top: 0;
+}
+
+.#{$block}__link--next,
+.#{$block}__link--previous {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: $size-xs;
+
+  @include bp(medium) {
+    width: $size-s;
+  }
+}
+
+.#{$block}__link--next,
+.#{$block}__link--previous {
+  height: 100%;
+}
+
+.#{$block}__link--previous {
+  left: auto;
+  right: 100%;
+}
+
+.#{$block}__link--next {
+  left: 100%;
+  right: auto;
+}
+
+.#{$block}--popout-controls {
+  padding-left: 0;
+  padding-right: 0;
+
+  .#{$block}__link--next,
+  .#{$block}__link--previous {
+    width: $size-xs;
+  }
+
+  .#{$block}__link--previous {
+    left: auto;
+    right: 100%;
+  }
+
+  .#{$block}__link--next {
+    left: 100%;
+    right: auto;
+  }
+}
+
+.#{$block}--highlight-current {
+  margin-bottom: 0;
+  margin-top: 0;
+
+  .#{$block}__card--active {
+    background-color: $c-link-light;
+  }
+}

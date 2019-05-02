@@ -1,0 +1,96 @@
+@import "../../scss/common";
+
+.pb-notification {
+  @include clearfix;
+  background-color: $c-white;
+  border-bottom: $border-width-tab $border-style transparent;
+  box-shadow: $box-shadow-header;
+  left: 0;
+  margin-bottom: $space-l;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $z-index-notification;
+}
+
+.pb-notification__title {
+  font-weight: $font-weight-bold;
+}
+
+.pb-notification__col1,
+.pb-notification__col2,
+.pb-notification__col3 {
+  float: left;
+  margin: 0;
+  padding: $space-l;
+}
+
+.pb-notification__col1 {
+  text-align: center;
+  width: percentage(2 / 12);
+
+  @include bp(medium) {
+    width: percentage(1 / 12);
+  }
+}
+
+.pb-notification__col2 {
+  width: percentage(12 / 12);
+
+  @include bp(medium) {
+    width: percentage(10 / 12);
+  }
+
+  .pb-notification__col1 + & {
+    width: percentage(10 / 12);
+
+    @include bp(medium) {
+      width: percentage(9 / 12);
+    }
+  }
+}
+
+.pb-notification__col3 {
+  width: 100%;
+
+  @include bp(medium) {
+    width: percentage(2 / 12);
+  }
+}
+
+.pb-notification--info {
+  border-bottom-color: $c-info;
+
+  .pb-notification__icon,
+  .pb-notification__title {
+    color: $c-info;
+  }
+}
+
+.pb-notification--danger {
+  border-bottom-color: $c-danger;
+
+  .pb-notification__icon,
+  .pb-notification__title {
+    color: $c-danger;
+  }
+}
+
+.pb-notification--warning {
+  border-bottom-color: $c-warning;
+
+  .pb-notification__icon,
+  .pb-notification__title {
+    color: $c-warning;
+  }
+}
+
+.pb-notification--success {
+  border-bottom-color: $c-success;
+
+  .pb-notification__icon,
+  .pb-notification__title {
+    color: $c-success;
+  }
+}

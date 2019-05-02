@@ -1,0 +1,16 @@
+@import "../../scss/common";
+
+$block: "pb-stats-bar";
+
+.#{$block} {
+  background-color: $c-white;
+  margin-top: 0;
+}
+
+.#{$block}__container {
+  @include container($space-l, $space-l);
+}
+
+.#{$block}__stat {
+  display: block;
+}

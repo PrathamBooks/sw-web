@@ -1,0 +1,24 @@
+@import "../../scss/common";
+
+$block: "pb-badge";
+
+.#{$block} {
+  background-color: $c-accent;
+  border: $border-style $border-width;
+  border-radius: $border-radius-circular;
+  color: $c-white;
+  display: inline-block;
+  font-size: strip-unit(modular-scale(-1)) * 1rem;
+  font-weight: $font-weight;
+  height: $size-xxxs;
+  letter-spacing: $letter-spacing-caps;
+  line-height: $line-height-solid;
+  min-width: $size-xxxs;
+  padding: $space-xxs $space-s;
+  vertical-align: middle;
+}
+
+.#{$block}--light {
+  background-color: $c-white;
+  color: $c-primary;
+}

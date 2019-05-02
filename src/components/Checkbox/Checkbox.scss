@@ -1,0 +1,83 @@
+@import "../../scss/common";
+
+$block: "pb-checkbox";
+
+.#{$block} {
+  margin-top: 0;
+  padding: $space-m 0;
+  position: relative;
+}
+
+.#{$block}__input {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $z-index-reset;
+}
+
+.#{$block}__label {
+  white-space: normal;
+}
+
+.#{$block}--font-weight--bold {
+  .#{$block}__label {
+    font-weight: $font-weight-bold;
+  }
+}
+
+.#{$block}__legend {
+  color: $c-text;
+  font-weight: $font-weight;
+  margin-left: $space-m;
+  margin-top: 0;
+  white-space: normal;
+}
+
+.#{$block}__icon,
+.#{$block}__loader {
+  float: right;
+  margin-left: $space-m;
+}
+
+.#{$block}__icon {
+  color: $c-primary;
+}
+
+.#{$block}--focused {
+  .#{$block}__label {
+    color: $c-primary;
+  }
+}
+
+.#{$block}--disabled {
+  .#{$block}__input {
+    cursor: not-allowed;
+  }
+
+  .#{$block}__icon {
+    color: $c-grey-light;
+  }
+}
+
+.#{$block}--inline {
+  padding: 0;
+
+  .#{$block}__icon,
+  .#{$block}__loader {
+    float: none;
+    margin-left: 0;
+    margin-right: $space-m;
+  }
+}
+
+.#{$block}--loading {
+  .#{$block}__input {
+    cursor: wait;
+  }
+}
+

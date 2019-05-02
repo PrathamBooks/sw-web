@@ -1,0 +1,128 @@
+@import "../../scss/common";
+
+$block: "pb-slim-notification";
+
+.#{$block} {
+  @include clearfix;
+  background-color: $c-white;
+  border: $border-width-m $border-style transparent;
+  border-radius: $border-radius-l;
+  box-shadow: $box-shadow-header;
+  display: flex;
+  left: 0;
+  margin-bottom: $space-l;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $space-l;
+  position: absolute;
+  right: 0;
+  width: percentage(8/10);
+  z-index: $z-index-notification;
+}
+
+.#{$block}__icon-wrapper,
+.#{$block}__content-wrapper,
+.#{$block}__actions {
+  margin: 0;
+  padding: $space-l $space-m;
+
+  @include bp(medium) {
+    padding: $space-l;
+  }  
+}
+
+.#{$block}__icon-wrapper {
+  align-items: center;
+  display: flex;
+  width: auto;
+}
+
+.#{$block}__content-wrapper {
+  width: 100%;
+
+  @include bp(medium) {
+    width: percentage(8 / 10);
+  }
+
+  .#{$block}__icon-wrapper + & {
+    width: percentage(8 / 10);
+
+    @include bp(medium) {
+      width: percentage(8 / 10);
+    }
+  }
+}
+
+.#{$block}__actions {
+  position: absolute;
+  right: 0;
+  width: auto;
+}
+
+.#{$block}__close {
+  color: $c-text;
+  display: flex;
+  height: $size-icon-l / 3;
+  width: $size-icon-l / 3;
+
+  @include bp(medium) {
+    height: $size-icon-m;
+    width: $size-icon-m;
+  }
+
+  &:hover, &:active {
+    color: $c-text;  
+  }
+}
+
+.#{$block}--info {
+  border-color: $c-info;
+
+  .#{$block}__icon-wrapper {
+    background-color: $c-info-light;
+    border-right: $border-width-m $border-style $c-info;
+  }
+
+  .#{$block}__icon {
+    color: $c-info;
+  }
+}
+
+.#{$block}--danger {
+  border-color: $c-danger;
+
+  .#{$block}__icon-wrapper {
+    background-color: $c-danger-light;
+    border-right: $border-width-m $border-style $c-danger;
+  }
+
+  .#{$block}__icon {
+    color: $c-danger;
+  }
+}
+
+.#{$block}--warning {
+  border-color: $c-warning;
+
+  .#{$block}__icon-wrapper {
+    background-color: $c-warning-light;
+    border-right: $border-width-m $border-style $c-warning;
+  }
+
+  .#{$block}__icon {
+    color: $c-warning;
+  }
+}
+
+.#{$block}--success {
+  border-color: $c-success;
+
+  .#{$block}__icon-wrapper {
+    background-color: $c-success-light;
+    border-right: $border-width-m $border-style $c-success;
+  }
+
+  .#{$block}__icon {
+    color: $c-success;
+  }
+}

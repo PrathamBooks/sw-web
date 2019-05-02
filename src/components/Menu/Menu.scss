@@ -1,0 +1,9 @@
+@import "../../scss/common";
+
+$block: "pb-menu";
+
+.#{$block} {
+  min-width: $size-l;
+  padding: $space-m 0; // $space-m is the top/bottom padding of <MenuLink>
+}
+

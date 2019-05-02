@@ -1,0 +1,23 @@
+@import "../../scss/common";
+
+$block: "pb-menu-wrapper";
+
+.#{$block} {
+  margin-top: 0;
+  padding: $space-m; // $space-m is the default padding of <MenuLink>
+}
+
+.#{$block}__title {
+  color: $c-text-light;
+  font-size: modular-scale(-1);
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-caps;
+  margin-bottom: $space-s;
+  text-transform: uppercase;
+}
+
+.#{$block}--match-left-icon {
+  padding-left: calc(#{$size-icon-m} + #{2 * $space-l});
+}
+
+

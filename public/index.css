@@ -1,0 +1,55 @@
+.cache-bar_container {
+  display: flex;
+  justify-content: center;
+}
+#refresh-cache-bar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 150;
+  bottom: 30px;
+  font-family: "Raleway", "sans-serif";
+}
+#refresh-cache-bar.show {
+  visibility: visible !important;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+.link {
+  color: #4990e2;
+  font-weight: 700;
+  padding: 0 20px 0 20px;
+  text-decoration: none !important;
+}
+
+#close-cache-bar {
+  color: #fff;
+  text-align: right;
+  text-decoration: none !important;
+}
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}

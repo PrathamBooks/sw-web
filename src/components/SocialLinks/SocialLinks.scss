@@ -1,0 +1,24 @@
+@import "../../scss/common";
+
+// .pb-social-links {}
+
+.pb-social-links--circular {
+  .pb-social-links__link {
+    border: $border-width $border-style currentColor;
+    border-radius: $border-radius-circular;
+    display: inline-block;
+    padding: $space-m;
+  }
+}
+
+.pb-social-links--light {
+  .pb-social-links__link {
+    color: $c-white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c-white;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import "../../scss/common";
+
+$block: "pb-pill";
+$height-pill: (4 * $ui-space - 8) * 1px; // -8 to reduce border widths
+
+.#{$block} {
+  background-color: $c-grey-lighter;
+  border: $border;
+  border-radius: $border-radius-circular;
+  display: inline-block;
+  line-height: $height-pill;
+  margin-top: 0;
+  padding: 0 $space-l;
+
+  & + & {
+    margin-left: $space-m;
+  }
+
+  &__label {
+    font-size: modular-scale(-1);
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-caps;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: $c-text;
+  }
+
+  &--dismissable {
+    padding-right: $space-m;
+  }
+}
+
+.#{$block}--with-icon {
+  padding-left: $space-m;
+
+  .#{$block}__label {
+    margin-left: $space-m;
+  }
+}
+
+.#{$block}--link {
+  background-color: $c-link-light;
+  border-color: $c-link-light;
+
+  .#{$block}__icon {
+    color: $c-white;
+  }
+}
+
+.#{$block}--is-category-pill {
+  background-color: $c-white;
+  border-color: $c-link-light;
+
+  .#{$block}__icon {
+    color: $c-link-light;
+  }
+}
+
+.#{$block}__icon {
+  vertical-align: middle;
+}
+
+
+
+
+

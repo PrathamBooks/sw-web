@@ -1,0 +1,162 @@
+@import "../../scss/common";
+
+$block: "pb-book-reader";
+
+// Breakpoints and widths from legacy reader style sheet
+// --
+// Landscape
+// (max-width: 359px)  width: 268px;
+// (max-width: 479px)  width: 308px;
+// (max-width: 490px)  width: 396px;
+// (max-width: 767px)  width: 452px;
+// (max-width: 900px)  width: 708px;
+// (max-width: 1365px) width: 805px;
+//                     width: 959px;
+// --
+// Portrait
+// (max-width: 359px)  width: 268px;
+// (max-width: 479px)  width: 308px;
+// (max-width: 490px)  width: 428px;
+// (max-width: 1365px) width: 415px;
+//                     width: 475px;
+
+$landscape-breakpoints: (
+  small:    "only screen and (min-width: 0px)",
+  medium:   "only screen and (min-width: 360px)",
+  large:    "only screen and (min-width: 480px)",
+  xlarge:   "only screen and (min-width: 491px)",
+  xxlarge:  "only screen and (min-width: 901px)",
+  xxxlarge: "only screen and (min-width: 1366px)"
+);
+
+$portrait-breakpoints: (
+  small:   "only screen and (min-width: 0px)",
+  medium:  "only screen and (min-width: 360px)",
+  large:   "only screen and (min-width: 480px)",
+  xlarge:  "only screen and (min-width: 491px)",
+  xxlarge: "only screen and (min-width: 1366px)"
+);
+
+.#{$block} {
+  padding: $space-m;
+
+  @include fullscreen {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.#{$block}__wrapper {
+  position: relative;
+}
+
+.#{$block}__frame {
+  border: none;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.#{$block}__control {
+  margin-top: 0;
+  position: absolute;
+}
+
+.#{$block}__control--next,
+.#{$block}__control--prev {
+  transform: translateY(-50%);
+}
+
+.#{$block}__control--next {
+  right: $space-m;
+  top: 50%;
+}
+
+.#{$block}__control--prev {
+  left: $space-m;
+  top: 50%;
+}
+
+.#{$block}__control--fullscreen {
+  left: $space-m;
+  top: $space-m;
+}
+
+.#{$block}__control--close {
+  right: $space-m;
+  top: $space-m;
+}
+
+.#{$block}__frame--no-pointer-events {
+  pointer-events: none;
+}
+
+.#{$block}--landscape {
+  .#{$block}__wrapper {
+    height: 193px;
+    width: 268px;
+
+    @include bp(medium, $landscape-breakpoints) {
+      height: 221px;
+      width: 308px;
+    }
+
+    @include bp(large, $landscape-breakpoints) {
+      height: 285px;
+      width: 396px;
+    }
+
+    @include bp(xlarge, $landscape-breakpoints) {
+      height: 325px;
+      width: 452px;
+    }
+
+    @include bp(xxlarge, $landscape-breakpoints) {
+      height: 509px;
+      width: 708px;
+    }
+
+    @include bp(xxlarge, $landscape-breakpoints) {
+      height: 577px;
+      width: 805px;
+    }
+
+    @include bp(xxxlarge, $landscape-breakpoints) {
+      height: 690px;
+      width: 959px;
+    }
+  }
+}
+
+.#{$block}--portrait {
+  .#{$block}__wrapper {
+    height: 396px;
+    width: 268px;
+
+    @include bp(medium, $portrait-breakpoints) {
+      height: 455px;
+      width: 308px;
+    }
+
+    @include bp(large, $portrait-breakpoints) {
+      height: 631px;
+      width: 428px;
+    }
+
+    @include bp(xlarge, $portrait-breakpoints) {
+      height: 612px;
+      width: 415px;
+    }
+
+    @include bp(xxlarge, $portrait-breakpoints) {
+      height: 700px;
+      width: 475px;
+    }
+  }
+}
+
+
+

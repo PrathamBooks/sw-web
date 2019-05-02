@@ -1,0 +1,99 @@
+@import "../../scss/common";
+
+$block: "pb-filters-bar";
+
+$height-filter-bar-action: $space-xxl;
+
+.#{$block} {
+  background-color: $c-white;
+  border: $border;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.#{$block}__count {
+  font-weight: $font-weight-bold;
+  margin-right: $space-m;
+  margin-top: 0;
+}
+
+.#{$block}__read-count {
+  margin-right: $space-m;
+  margin-top: 0;
+}
+
+.#{$block}__section-label {
+  margin-right: $space-m;
+  margin-top: 0;
+}
+
+.#{$block}__status {
+  border-top: $border;
+  margin-top: 0;
+  padding: $space-m 0;
+}
+
+.#{$block}__action-wrapper {
+  @include clearfix;
+}
+
+.#{$block}__actions {
+  line-height: $height-filter-bar-action;
+  margin-top: 0;
+
+  @include bp(large) {
+    float: left;
+    padding: 0 $space-m;
+  }
+
+  &:first-child {
+    @include bp(large) {
+      padding-left: 0;
+    }
+  }
+
+  &:last-child {
+    @include bp(large) {
+      padding-right: 0;
+    }
+  }
+
+  > * {
+    line-height: $line-height;
+    margin-top: 0;
+  }
+}
+
+.#{$block}__actions--primary {
+  @include bp(large) {
+    width: percentage(3/ 4);
+  }
+}
+
+.#{$block}__actions--secondary {
+  border-top: $border;
+
+  @include bp(large) {
+    border-top-width: 0;
+    text-align: right;
+    width: percentage(1/ 4);
+  }
+}
+
+.#{$block}__pill {
+  margin-bottom: $space-m;
+}
+
+.#{$block}--pull-up {
+  margin-top: -1 * $space-l;
+}
+
+.#{$block}--no-top-border {
+  border-top-width: 0;
+}
+
+.#{$block}--has-filter {
+  .#{$block}__status {
+    margin-bottom: -1 * $space-m;
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../scss/common";
+
+// .pb-shrinker {}
+.pb-shrinker--shrunk {
+  max-height: $size-s;
+  min-height: $size-xs;
+  overflow: hidden;
+  position: relative;
+}
+
+.pb-shrinker__toggle{
+  margin: 0;
+}
+
+.pb-shrinker__toggle-link {
+  display: block;
+  font-size: modular-scale(-1);
+  padding: $space-s;
+  text-align: center;
+  width: 100%;
+}
+
+.pb-shrinker--shrunk {
+  .pb-shrinker__toggle {
+    background-image: $gradient-shrinker-bg;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .pb-shrinker__toggle-link {
+    bottom: 0;
+    position: absolute;
+  }
+}

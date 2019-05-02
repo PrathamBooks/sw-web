@@ -1,0 +1,62 @@
+@import "../../scss/common";
+
+$item-block: "pb-selectable-grid-item";
+
+
+.#{$item-block} {
+  position: relative;
+}
+
+.#{$item-block}__input,
+.#{$item-block}__wrapper {
+  height: 100%;
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.#{$item-block}__wrapper {
+  background-image: $gradient-dark-to-semi-transparent;
+  color: $c-white;
+  overflow: hidden;
+  padding: $space-m;
+}
+
+.#{$item-block}__input {
+  opacity: 0;
+}
+
+.#{$item-block}--rounded-corners {
+  .#{$item-block}__wrapper {
+    border-radius: $border-radius;
+  }
+}
+
+.#{$item-block}--checked.#{$item-block}--rotate-on-active {
+  transform: rotate(1deg);
+}
+
+.#{$item-block}--danger.#{$item-block}--checked {
+  .#{$item-block}__wrapper {
+    background-image: $gradient-dark-to-semi-transparent-danger;
+  }
+}
+
+.#{$item-block}--primary {
+  .#{$item-block}__wrapper {
+    background-image: $gradient-dark-to-lighter-transparent;
+  }
+}
+
+
+
+$block: "pb-selectable-grid";
+
+// .#{$block} {
+//   &__element {}
+// }
+
+// .#{$block}--modifier {}

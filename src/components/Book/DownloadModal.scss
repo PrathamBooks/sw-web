@@ -1,0 +1,12 @@
+@import "../../scss/common";
+
+$block: "pb-download-modal";
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(1);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  padding-bottom: $space-m;
+}
+

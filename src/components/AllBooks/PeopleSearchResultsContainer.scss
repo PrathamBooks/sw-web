@@ -1,0 +1,15 @@
+@import "../../scss/common";
+
+$block: "pb-people-search-results";
+
+.#{$block} {
+  &__count {
+    font-weight: $font-weight-bold;
+  }
+
+  &__status {
+    border-bottom: $border;
+    border-top: $border;
+    padding: $space-m 0;
+  }
+ }

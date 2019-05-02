@@ -1,0 +1,21 @@
+.pb-assistive-text {
+  @include hide-visually;
+}
+
+@each $key, $pixels in $breakpoints {
+  .pb-visibility-show-#{$key} {
+    display: none;
+
+    @include bp($key) {
+      display: block;
+    }
+  }
+
+  .pb-visibility-hide-#{$key} {
+    display: block;
+
+    @include bp($key) {
+      display: none;
+    }
+  }
+}

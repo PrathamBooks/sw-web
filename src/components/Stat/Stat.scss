@@ -1,0 +1,76 @@
+@import "../../scss/common";
+
+$block: "pb-stat";
+
+.#{$block} {
+  display: inline-block;
+  margin-top: 0;
+
+  & + & {		
+     margin-left: $space-l;		
+   }
+}
+
+// .#{$block}__icon {}
+
+.#{$block}__value,
+.#{$block}__label {
+  margin-left: $space-s;
+}
+
+.#{$block}__link {
+  font-weight: $font-weight;
+}
+
+.#{$block}--s {
+  .#{$block}__icon {
+    vertical-align: sub;
+  }
+
+  .#{$block}__value,
+  .#{$block}__label {
+    font-size: modular-scale(-1);
+    margin-top: 0;
+  }
+}
+
+.#{$block}--l {
+  .#{$block}__value,
+  .#{$block}__label {
+    display: block;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .#{$block}__icon {
+    display: inline-block;
+  }
+
+  .#{$block}__value {
+    color: $c-accent;
+    font-family: $font-family-alt;
+    font-size: modular-scale(1);
+    font-weight: $font-weight;
+    line-height: $line-height-heading;
+
+    @include bp(medium) {
+      font-size: modular-scale(2);
+    }
+  }
+
+  .#{$block}__label {
+    color: $c-text-light;
+    font-size: modular-scale(-2);
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-caps;
+    text-transform: uppercase;
+
+    @include bp(medium) {
+      font-size: modular-scale(-1);
+    }
+  }
+}
+
+.#{$block}--align-center {
+  text-align: center;
+}

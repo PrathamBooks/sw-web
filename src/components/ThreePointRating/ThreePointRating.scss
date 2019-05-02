@@ -1,0 +1,13 @@
+@import "../../scss/common";
+
+$block: "pb-three-point-rating";
+
+
+  .#{$block} {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    min-height: $size-l;
+  }
+

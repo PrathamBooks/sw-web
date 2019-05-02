@@ -1,0 +1,43 @@
+@import "../../scss/common";
+
+$block: "pb-picklist";
+
+$link-height-clear: $size-xxs;
+
+.#{$block} {
+  min-width: $size-l;
+}
+
+.#{$block}__clear-trigger {
+  display: block;
+  line-height: $link-height-clear;
+  text-align: right;
+}
+
+.#{$block}__options {
+  @include enable-smooth-scroll-on-touch;
+  max-height: $size-l;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.#{$block}--fit-to-container {
+  height: 100%;
+  position: relative;
+
+  .#{$block}__options {
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    max-height: none;
+    position: absolute;
+    right: 0;
+    top: $height-input-field + $space-m;
+  }
+
+  &.#{$block}--clearable {
+    .#{$block}__options {
+      top: $height-input-field + 2 * $space-m + $link-height-clear;
+    }
+  }
+}

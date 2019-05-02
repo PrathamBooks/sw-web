@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#4990e2">
+    <meta http-equiv="content-language" content="en, hi" />
+    <meta http-equiv="charset" content="UTF-8" />
+    <meta property="og:site_name" content="https://storyweaver.org.in/" />
+    <meta property="og:type" content="$OG_TYPE" />
+    <meta name="description" content="$DESCRIPTION" />
+    <meta property="og:title" content="$OG_TITLE" />
+    <meta property="og:url" content="$OG_URL"  />
+    <meta property="og:description" content="$OG_DESCRIPTION"  />
+    <meta property="og:image" content="$OG_IMAGE" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="$OG_TITLE" />
+    <meta property="book" content="$OG_BOOK_URL" />
+    <meta property="books:release_date" content="$OG_BOOK_RELEASE_DATE" />
+    <meta property="books:tag" content="$OG_BOOK_TAGS" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="$OG_URL">
+    <meta name="twitter:title" content="$OG_TITLE">
+    <meta name="twitter:description" content="$OG_DESCRIPTION">
+    <meta name="twitter:site" content="@prathambooks">
+    <meta name="twitter:image" content="$OG_IMAGE" />
+    <meta property="og:image:alt" content="$OG_TITLE" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway:400,700" rel="stylesheet">
+    <script>
+      window.SW_APP_VERSION = '%GIT_COMMIT_HASH%';
+    </script>
+    
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      window.ga('create','%GA_PROPERTY_ID%' , 'auto');
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function()
+
+      {n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+      ;
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '%FACEBOOK_PIXEL_ID%');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) 
+      {w[l] = w[l] || []; w[l].push({
+       'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+       var f = d.getElementsByTagName(s)[0],
+       j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+       j.async = true;
+       j.src ='https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+       f.parentNode.insertBefore(j, f);
+    }) (window, document, 'script', 'dataLayer', '%GOOGLE_TAG_MANAGER_ID%');
+    </script>
+    <!-- End Google Tag Manager -->
+    <title>StoryWeaver</title>
+  </head>
+  <body>
+    <!-- Facebook Pixel Code -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=%FACEBOOK_PIXEL_ID%&ev=PageView&noscript=1"
+      />
+    <!-- End Facebook Pixel Code -->
+    <!-- Google Tag Manager -->
+      <iframe src="https://www.googletagmanager.com/ns.html?id=%GOOGLE_TAG_MANAGER_ID%"
+      height="0" width="0" style="display:none;visibility:hidden">
+      </iframe>
+    <!-- End Google Tag Manager -->
+    You need to enable JavaScript to run this app.  
+    </noscript>  
+    <div id="root"></div>
+    <div class="cache-bar_container">
+      <div id="refresh-cache-bar" style="visibility: hidden;">A new version of this website is available <a id="reload" class='link' href="">REFRESH</a> <a id="close-cache-bar" href="" >X</a></div>
+    </div>
+    <script type="text/javascript" src="/index.js"></script>
+    <link rel="stylesheet" href="/index.css" type="text/css"/>
+  </body>  
+</html>

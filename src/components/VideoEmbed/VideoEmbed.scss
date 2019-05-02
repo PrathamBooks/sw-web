@@ -1,0 +1,33 @@
+@import "../../scss/common";
+
+.pb-video-embed {
+  position: relative;
+
+  // .tube-embed from component 'react-tube-embed'
+  .tube-embed,
+  iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.pb-video-embed__wrapper {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pb-video-embed--4-by-3 {
+  padding-top: 75%;
+}
+
+.pb-video-embed--1-by-1 {
+  padding-top: 100%;
+}
+
+.pb-video-embed--16-by-9 {
+  padding-top: 56.25%;
+}

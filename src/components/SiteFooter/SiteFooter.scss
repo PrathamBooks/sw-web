@@ -1,0 +1,93 @@
+@import "../../scss/common";
+
+.pb-site-footer {
+  color: $c-white;
+  margin-top: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.pb-site-footer__container {
+  @include container($space-l, $space-xl);
+}
+
+.pb-site-footer__bg {
+  background-color: $c-bg-dark;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.pb-site-footer-bg-img-wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &::after {
+    background-image: $gradient-site-footer-bg;
+    bottom: 0;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.pb-site-footer__bg-img {
+  background-position: center center;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pb-site-footer__center {
+  padding: $space-l;
+  text-align: center;
+}
+
+.pb-site-footer__heart-icon {
+  color: $c-accent;
+  display: inline-block;
+}
+
+.pb-site-footer__notice {
+  background-color: $c-bg;
+  bottom: 0;
+  box-shadow: 0 (-$size-xxxs/2) $size-xxxs (-$size-xxxs/2) $c-grey;
+  color: $c-primary;
+  padding: $space-m;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: $z-index-notification;
+}
+
+.pb-site-footer__platform-attribution {
+  align-items: center;
+  background-color: $c-white;
+  color: $c-black;
+  display: flex;
+  justify-content: center;
+  padding: $space-l 0;
+
+  >* + * {
+    margin-top: 0;
+  }
+}
+
+.pb-site-footer__platform-attribution-text {
+  font-size: 3 * $space-s;
+  margin-top: $space-m;
+  padding-right: $space-m;
+}

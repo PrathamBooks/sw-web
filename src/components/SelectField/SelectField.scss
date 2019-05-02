@@ -1,0 +1,178 @@
+@import "../../scss/common";
+
+$block: "pb-select-field";
+
+
+.#{$block} {
+  display: block;
+}
+
+// Element 'box' is the visible border in the component
+.#{$block}__box {
+  border: $border;
+  border-radius: $border-radius;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: $height-input-field-label;
+  transition:
+    border-color $transition-duration-instant $transition-function,
+    box-shadow $transition-duration-instant $transition-function;
+}
+
+
+.#{$block}__input-wrapper {
+  height: $height-input-field;
+  overflow: hidden;
+  position: relative;
+}
+
+.#{$block}__label {
+  @include ellipsis;
+  color: $c-primary;
+  font-size: modular-scale(-1);
+  font-weight: $font-weight-bold;
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition:
+    font-size $transition-duration-instant $transition-function,
+    top $transition-duration-instant $transition-function,
+    left $transition-duration-instant $transition-function,
+    color $transition-duration-instant $transition-function;
+}
+
+.#{$block}--form-field {
+  .#{$block}__label {
+    color: $c-grey-light;
+  }
+}
+
+.#{$block}__input {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  bottom: 0;
+  font-family: $font-family;
+  font-size: modular-scale(0);
+  left: 0;
+  line-height: $line-height-px;
+  margin-top: 0;
+  outline: none;
+  padding: $height-input-field-label $space-xl 0 $space-m;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $c-black;
+  }
+}
+
+.#{$block}__caret {
+  opacity: $opacity-theme-light;
+}
+
+.#{$block}__icon-wrapper {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding: $space-s $space-m;
+  position: absolute;
+  right: 0;
+  top: $height-input-field-label;
+}
+
+.#{$block}--focus {
+  .#{$block}__box {
+    border-color: $c-primary;
+    box-shadow: $box-shadow-input-field $c-primary;
+  }
+}
+
+.#{$block}--blank {
+  .#{$block}__label {
+    font-size: modular-scale(0);
+    left: $space-m;
+    top: $height-input-field-label + $space-s;
+  }
+}
+
+.#{$block}--theme-light {
+  color: $c-white;
+
+  .#{$block}__label {
+    color: $c-white;
+  }
+
+  .#{$block}__input {
+    color: $c-white;
+
+    option {
+      color: $c-text;
+    }
+  }
+
+  &.#{$block}--focus {
+    .#{$block}__box {
+      border-color: $c-white;
+      box-shadow: $box-shadow-input-field $c-white;
+    }
+  }
+
+  .#{$block}__icon-wrapper {
+    color: $c-white;
+  }
+
+  .#{$block}__caret {
+    opacity: $opacity-opaque;
+  }
+
+  &.#{$block}--error {
+    .#{$block}__label {
+      color: $c-white;
+    }
+
+    .#{$block}__error-text {
+      color: $c-white;
+    }
+  }
+}
+
+.#{$block}--theme-blue {
+  color: $c-link;
+
+  .#{$block}__input {
+    color: $c-link;
+    font-weight: $font-weight-bold;
+
+    option {
+      color: $c-text;
+      font-weight: $font-weight;
+    }
+  }
+}
+
+
+.#{$block}--disabled {
+  .#{$block}__input {
+    cursor: not-allowed;
+  }
+
+  .#{$block}__label {
+    color: $c-grey-light;
+  }
+}
+
+.#{$block}--loading {
+  .#{$block}__input {
+    cursor: wait;
+  }
+}

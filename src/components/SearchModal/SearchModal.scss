@@ -1,0 +1,15 @@
+@import "../../scss/common";
+
+$block: "pb-search-modal";
+
+// .#{$block} {
+//   &__element {}
+// }
+
+.#{$block}__search-box {
+  padding-top: $space-m;
+}
+
+.#{$block}__submit {
+  margin-top: $space-xl;
+}

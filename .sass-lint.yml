@@ -1,0 +1,22 @@
+files:
+  include: '**/*.s+(a|c)ss'
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  class-name-format:
+    - 1
+    - convention: hyphenatedbem
+  no-color-keywords: 0
+  placeholder-name-format:
+    - 1
+    - convention: hyphenatedbem
+  property-sort-order:
+    - 1
+    - order: alphabetical
+  quotes:
+    - 1
+    - style: double
+  empty-line-between-blocks:
+    - 1
+    - include: true

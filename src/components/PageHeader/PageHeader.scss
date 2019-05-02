@@ -1,0 +1,120 @@
+@import "../../scss/common";
+
+$block: "pb-page-header";
+
+.#{$block} {
+  overflow: hidden;
+}
+
+.#{$block}__wrapper {
+  @include container($space-l, $space-l);
+  @include clearfix;
+  background-color: $c-white;
+  padding-bottom: $space-xl;
+}
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(3);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin-top: 0;
+}
+
+.#{$block}__bg-img,
+.#{$block}__img,
+.#{$block}__bg-overlay {
+  height: 100%;
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.#{$block}__bg-img {
+  background-position: center center;
+  background-size: cover;
+}
+
+.#{$block}__bg-overlay {
+  background-color: $c-overlay;
+}
+
+.#{$block}__content,
+.#{$block}__actions,
+.#{$block}__icon {
+  float: left;
+}
+
+.#{$block}__icon {
+  margin-top: $space-m;
+}
+
+.#{$block}__actions,
+.#{$block}__content {
+  margin-top: $space-l;
+  padding-right: 0 $space-m;
+}
+
+.#{$block}__content {
+  padding-right: $space-m;
+  width: 100%;
+
+  @include bp(large) {
+    width: percentage(10 / 12);
+  }
+}
+
+.#{$block}__actions {
+  @include bp(large) {
+    padding-left: $space-m;
+    width: percentage(2 / 12);
+  }
+}
+
+.#{$block}--icon {
+  .#{$block}__content {
+    padding-left: $space-l;
+    width: calc(100% - #{$size-icon-xl});
+
+    @include bp(large) {
+      width: calc(#{percentage(10 / 12)} - #{$size-icon-xl});
+    }
+  }
+
+  .#{$block}__actions {
+    margin-left: calc(#{$size-icon-xl} + #{$space-l});
+
+    @include bp(large) {
+      margin-left: 0;
+    }
+  }
+}
+
+.#{$block}--bg-image {
+  color: $c-white;
+  position: relative;
+
+  .#{$block}__wrapper {
+    background-color: transparent;
+    padding-bottom: $space-xl;
+    padding-top: $space-xl;
+  }
+}
+
+.#{$block}--pull-in-bottom {
+  margin-bottom: -1 * $space-xl;
+
+  .#{$block}__wrapper {
+    padding-bottom: $space-xxl;
+  }
+}
+
+.#{$block}--overlay-mid-night-gradient {
+  .#{$block}__bg-overlay {
+    background-color: transparent;
+    background-image: $gradient-mid-night;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../scss/common";
+
+$block: "pb-sizer";
+
+.#{$block} {
+  overflow: hidden;
+}
+
+@each $size, $value in $sizes {
+  .#{$block}--width-#{$size} {
+    width: $value;
+  }
+
+  .#{$block}--height-#{$size} {
+    height: $value;
+  }
+
+  .#{$block}--max-width-#{$size} {
+    max-width: $value;
+  }
+
+  .#{$block}--max-height-#{$size} {
+    max-height: $value;
+  }
+}
+
+.#{$block}--scroll-x,
+.#{$block}--scroll-y {
+  @include styled-scroll-bar;
+  @include enable-smooth-scroll-on-touch;
+}
+
+.#{$block}--scroll-x {
+  overflow-x: auto;
+}
+
+.#{$block}--scroll-y {
+  overflow-y: auto;
+}
+

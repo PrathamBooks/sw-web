@@ -1,0 +1,52 @@
+@import "../../scss/common";
+
+$block: "pb-menu-item";
+
+.#{$block} {
+  display: block;
+  margin-top: 0;
+  position: relative;
+}
+
+.#{$block}__legend,
+.#{$block}__label {
+  margin-top: 0;
+  padding: $space-m;
+}
+
+.#{$block}__legend {
+  color: $c-text;
+  font-size: modular-scale(-1);
+  font-weight: $font-weight;
+  margin-top: -1 * $space-m;
+  white-space: normal;
+}
+
+.#{$block}--left-icon {
+  .#{$block}__legend,
+  .#{$block}__label {
+    padding-left: calc(#{$size-icon-m} + #{2 * $space-l});
+  }
+}
+
+.#{$block}--right-icon {
+  .#{$block}__legend,
+  .#{$block}__label {
+    padding-right: calc(#{$size-icon-m} + #{2 * $space-l});
+  }
+}
+
+.#{$block}__icon {
+  margin-top: 0;
+  position: absolute;
+  top: $space-m;
+}
+
+.#{$block}__icon--left {
+  left: $space-l;
+}
+
+.#{$block}__icon--right {
+  right: $space-l;
+}
+

@@ -1,0 +1,22 @@
+@import "../../scss/common";
+
+$block: "pb-illustration-upload-modal";
+
+// .#{$block} {
+//   &__element {}
+// }
+
+// .#{$block}--modifier {}
+
+.#{$block}__instructions-body {
+  font-size: modular-scale(-1);
+}
+
+.#{$block}__accept-clause {
+  padding-top: $space-l;
+}
+
+.#{$block}__child-details {
+  padding-top: $space-l;
+}
+

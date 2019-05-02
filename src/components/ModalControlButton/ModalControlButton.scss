@@ -1,0 +1,38 @@
+@import "../../scss/common";
+
+$block: "pb-modal-control-button";
+
+.#{$block} {
+  background-color: transparentize($c-black, $opacity-theme-light-light);
+  border: $border-style $border-width;
+  border-radius: $border-radius-circular;
+  color: $c-white;
+  display: inline-block;
+  line-height: $size-icon-s;
+  padding: $space-m;
+  transition: background-color $transition-duration-instant $transition-function;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparentize($c-black, $opacity-theme-light);
+    color: $c-white;
+  }
+
+  &__icon {
+    filter: drop-shadow(0 $border-width 0 transparentize($c-black, $opacity-theme-light-light));
+    vertical-align: top;
+  }
+}
+
+.#{$block}--s {
+  padding: $space-s;
+}
+
+.#{$block}--s-m {
+  padding: $space-s;
+
+  @include bp(medium) {
+    padding: $space-m;
+  }
+}

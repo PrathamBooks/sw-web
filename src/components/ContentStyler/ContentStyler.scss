@@ -1,0 +1,76 @@
+@import "../../scss/common";
+
+$block: "pb-content-styler";
+
+.#{$block} {
+  margin: 0;
+
+  h1,
+  h2,
+  h3 {
+    font-family: $font-family-alt;
+    font-weight: $font-weight;
+    line-height: $line-height-heading;
+  }
+
+  h1,
+  h2 {
+    margin-bottom: $space-l;
+    margin-top: $space-xl;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: modular-scale(3);
+  }
+
+  h2 {
+    font-size: modular-scale(2);
+  }
+
+  h3 {
+    font-size: modular-scale(1);
+  }
+
+  .pb-center {
+    text-align: center;
+  }
+
+  .pb-left {
+    text-align: left;
+  }
+
+  ul,
+  ol {
+    padding-left: $space-xl;
+  }
+
+  li + li {
+    margin-top: $space-l;
+  }
+
+  ol {
+    counter-reset: pb-counter;
+    list-style-type: none;
+
+
+    li {
+      position: relative;
+
+      &::before {
+        content: counters(pb-counter, ".");
+        counter-increment: pb-counter;
+        font-size: modular-scale(1);
+        font-weight: $font-weight-bold;
+        line-height: $line-height-solid;
+        margin-right: $space-m;
+        position: absolute;
+        right: 100%;
+      }
+    }
+  }
+}
+
+.#{$block}--light {
+  color: $c-white;
+}

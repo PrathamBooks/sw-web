@@ -1,0 +1,26 @@
+@import "../../scss/common";
+
+$block: "pb-columnizer";
+
+.#{$block} {
+  @include clearfix;
+
+  margin-left: -1 * $space-m;
+  margin-right: -1 * $space-m;
+}
+
+.#{$block}__column {
+  float: left;
+  margin-top: 0;
+  padding: 0 $space-m;
+}
+
+.#{$block}--no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+
+  .#{$block}__column {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

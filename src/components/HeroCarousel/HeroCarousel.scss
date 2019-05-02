@@ -1,0 +1,17 @@
+@import "../../scss/common";
+
+$block: "pb-hero-carousel";
+
+.#{$block} {
+  background-color: $c-bg;
+  padding-top:  29.3887147%; // Carousel Image proportion: 2552 x 750
+  position: relative;
+}
+
+.#{$block}__container {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

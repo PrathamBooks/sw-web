@@ -1,0 +1,271 @@
+@import "../../scss/common";
+
+$block: "pb-modal";
+
+$footer-height: $height-input-field;
+$header-height: $height-toggle-switch + $space-m * 2 + $space-l * 2;
+
+.#{$block}__container {
+  // Only having 'margin: auto;' on the child instead
+  // of the 'align-items' and 'justify-content' written
+  // here doesn't work on UC Browser.
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  margin-top: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-index-modal;
+}
+
+.#{$block}__bounds {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-l3;
+  position: relative;
+}
+
+.#{$block}__header,
+.#{$block}__footer,
+.#{$block}__content-wrapper {
+  background-color: $c-white;
+  margin-top: 0;
+}
+
+.#{$block}__header,
+.#{$block}__footer {
+  left: 0;
+  overflow: hidden;
+  right: 0;
+}
+
+.#{$block}__header,
+.#{$block}__content-wrapper {
+  padding: $space-l;
+}
+
+.#{$block}__content {
+  border-radius: $border-radius;
+  display: block;
+  position: relative;
+}
+
+.#{$block}__content-wrapper {
+  @include enable-smooth-scroll-on-touch;
+  border-radius: $border-radius;
+  //SW-2675 : Fixed footer buttons not showing properly in Safari iPhone
+  max-height: calc(100vh - #{$space-xxl} - #{$space-l});
+  min-height: $size-m;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: calc(100vw - 2 * #{$space-l});
+
+  @include bp(medium) {
+    max-width: $size-xxl;
+    min-width: $size-xxl;
+  }
+}
+
+.#{$block}__header {
+  border-radius: $border-radius $border-radius 0 0;
+  height: $header-height;
+  position: absolute;
+  top: 0;
+
+  > h1,
+  > h2 {
+    font-family: $font-family-alt;
+    font-size: modular-scale(1);
+    font-weight: $font-weight;
+    line-height: $line-height-heading;
+  }
+}
+
+.#{$block}__footer {
+  border-radius: 0 0 $border-radius $border-radius;
+  bottom: 0;
+  max-height: $footer-height;
+  position: sticky;
+}
+
+.#{$block}--header {
+  .#{$block}__content-wrapper {
+    padding-top: $header-height;
+  }
+}
+
+.#{$block}--footer {
+  .#{$block}__content-wrapper {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.#{$block}--long {
+  .#{$block}__content-wrapper {
+    min-height: $size-l;
+  }
+}
+
+.#{$block}--extra-long {
+  .#{$block}__content-wrapper {
+    min-height: $size-xl;
+  }
+}
+
+.#{$block}__close {
+  background-color: $c-overlay-light;
+  border-radius: $border-radius-circular;
+  color: $c-text;
+  margin-top: 0;
+  padding: $space-s;
+  position: absolute;
+  right: $space-s;
+  top: $space-s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $c-text;
+  }
+}
+
+.#{$block}--no-content-scroll {
+  .#{$block}__content-wrapper {
+    overflow-y: hidden;
+  }
+}
+
+.#{$block}--no-content-padding {
+  .#{$block}__content {
+    height: 100%;
+  }
+
+  .#{$block}__content-wrapper {
+    padding: 0;
+  }
+
+  &.#{$block}--header {
+    .#{$block}__content-wrapper {
+      padding-top: $header-height;
+    }
+  }
+
+  &.#{$block}--footer {
+    .#{$block}__content-wrapper {
+      padding-bottom: $footer-height;
+    }
+  }
+}
+
+.#{$block}--fill-viewport {
+  .#{$block}__bounds,
+  .#{$block}__content,
+  .#{$block}__content-wrapper,
+  .#{$block}__header,
+  .#{$block}__footer {
+    border-radius: 0;
+  }
+
+  .#{$block}__container,
+  .#{$block}__bounds {
+    display: block;
+    height: 100%; // UCBrowser fix
+    width: 100%; // UCBrowser fix
+  }
+
+  .#{$block}__content-wrapper {
+    height: 100%; // UCBrowser fix
+    max-height: none;
+    min-height: 0;
+    width: 100%; // UCBrowser fix
+
+    @include bp(medium) {
+      max-width: none;
+    }
+  }
+}
+
+.#{$block}--bg-transparent {
+  .#{$block}__header,
+  .#{$block}__footer,
+  .#{$block}__content-wrapper {
+    background-color: transparent;
+  }
+
+  .#{$block}__bounds {
+    box-shadow: none;
+  }
+
+  .#{$block}__close {
+    color: $c-text;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c-text;
+    }
+  }
+}
+
+.#{$block}--no-dimension-restrictions {
+  .#{$block}__content-wrapper {
+    max-height: 100vh;
+    max-width: 100vw;
+    min-height: 0;
+    min-width: 0;
+    width: auto;
+
+    @include bp(medium) {
+      max-width: none;
+      min-width: 0;
+    }
+  }
+}
+
+
+.#{$block}--closable {
+  .#{$block}__header {
+    padding-right: $space-xl;
+  }
+}
+
+.#{$block}--narrow {
+  .#{$block}__content-wrapper {
+    max-width: 50vw; 
+    min-width: 50vw;
+  }
+
+  // restricting width of content so that scroll bar don't effect width and trigger resize event
+  .#{$block}__content {
+    max-width: 48vw; 
+    min-width: 48vw;
+  }
+}
+
+.#{$block}--wide {
+  .#{$block}__content-wrapper {
+    max-width: 65vw; // old chromium browser fix
+    min-width: 65vw;
+  }
+
+  .#{$block}__content {
+    max-width: 63vw; 
+    min-width: 63vw;
+  }
+}
+
+.#{$block}--extra-wide {
+  .#{$block}__content-wrapper {
+    max-width: 80vw; 
+    min-width: 80vw;
+  }
+
+  .#{$block}__content {
+    max-width: 78vw; 
+    min-width: 78vw;
+  }
+}

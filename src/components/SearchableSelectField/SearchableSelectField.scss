@@ -1,0 +1,150 @@
+@import "../../scss/common";
+
+$block: "pb-searchable-select-field";
+
+// .#{$block} {}
+
+.#{$block}__wrapper {
+  height: $height-input-field;
+  position: relative;
+}
+
+.#{$block}__control,
+.#{$block}__label,
+.#{$block}__box,
+.#{$block}__picklist {
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.#{$block}__picklist {
+  background-color: $c-white;
+  border: $border-light;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-l2;
+  height: $size-xl;
+  margin-top: $space-m;
+  padding: $space-m;
+  top: 100%;
+  z-index: $z-index-dropdown;
+}
+
+.#{$block}__control {
+  @include ellipsis();
+  background-color: transparent;
+  border: 0;
+  color: $c-link;
+  display: block;
+  font-family: $font-family;
+  font-size: modular-scale(0);
+  font-weight: $font-weight-bold;
+  height: 100%;
+  line-height: $line-height-px;
+  outline: none;
+  padding: $height-input-field-label ($space-xl + $space-s) 0 $space-m;
+  text-align: left;
+  width: 100%;
+}
+
+// Element 'box' is the visible border in the component
+.#{$block}__box {
+  border: $border;
+  border-radius: $border-radius;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: $height-input-field-label;
+  transition:
+    border-color $transition-duration-instant $transition-function,
+    box-shadow $transition-duration-instant $transition-function;
+}
+
+.#{$block}__label {
+  @include ellipsis;
+  color: $c-primary;
+  font-size: modular-scale(-1);
+  font-weight: $font-weight-bold;
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition:
+    font-size $transition-duration-instant $transition-function,
+    top $transition-duration-instant $transition-function,
+    left $transition-duration-instant $transition-function,
+    color $transition-duration-instant $transition-function;
+}
+
+.#{$block}__caret {
+  opacity: $opacity-theme-light;
+}
+
+.#{$block}__icon-wrapper {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding: $space-s $space-m;
+  position: absolute;
+  right: 0;
+  top: $height-input-field-label;
+}
+
+.#{$block}__error-text {
+  color: $c-danger;
+  font-size: modular-scale(-1);
+}
+
+.#{$block}--height-s {
+  .#{$block}__picklist {
+    height: $size-l;
+  }
+}
+
+.#{$block}--blank {
+  .#{$block}__label {
+    font-size: modular-scale(0);
+    left: $space-m;
+    top: $height-input-field-label + $space-s;
+  }
+}
+
+.#{$block}--focused {
+  .#{$block}__box {
+    border-color: $c-primary;
+    box-shadow: $box-shadow-input-field $c-primary;
+  }
+}
+
+.#{$block}--error {
+  .#{$block}__label {
+    color: transparentize($c-danger, $opacity);
+  }
+
+  .#{$block}__box {
+    border-color: $c-danger;
+    box-shadow: $box-shadow-input-field $c-danger;
+  }
+}
+
+.#{$block}--disabled {
+  .#{$block}__control {
+    cursor: not-allowed;
+  }
+
+  .#{$block}__label {
+    color: $c-grey-light;
+  }
+}
+
+.#{$block}--loading {
+  .#{$block}__control {
+    cursor: wait;
+  }
+}

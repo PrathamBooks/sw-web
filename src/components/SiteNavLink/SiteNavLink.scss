@@ -1,0 +1,92 @@
+@import "../../scss/common";
+
+@mixin site-nav-link-marker-pseudo-el($bg-color: transparent) {
+  background-color: $bg-color;
+  bottom: 0;
+  content: " ";
+  display: block;
+  height: $border-width-tab;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.pb-site-nav-link {
+  color: $c-text;
+  display: inline-block;
+  font-family: $font-family-alt;
+  line-height: $space-xxl;
+  margin: 0;
+  text-align: center;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $c-accent;
+  }
+}
+
+.pb-site-nav-link__title {
+  display: inline-block;
+  padding: 0 $space-m;
+  position: relative;
+
+  @include bp(large) {
+    padding-left: $space-l;
+    padding-right: $space-l;
+  }
+}
+
+.pb-site-nav-link__caret {
+  margin-right: $space-m;
+}
+
+.pb-site-nav-link--caret {
+  .pb-site-nav-link__title {
+    padding-right: $space-s;
+  }
+}
+
+.pb-site-nav-link--truncate-long-text {
+  .pb-site-nav-link__title {
+    @include ellipsis;
+    max-width: $size-m;
+    vertical-align: bottom; // Hack to fix vertical alignment. Refer https://stackoverflow.com/a/14870205
+  }
+}
+
+.pb-site-nav-link--bordered {
+  &:hover,
+  &:active,
+  &:focus {
+    .pb-site-nav-link__title::after {
+      @include site-nav-link-marker-pseudo-el;
+    }
+  }
+}
+
+.pb-site-nav-link--respond-width {
+  width: 100%;
+
+  @include bp(large) {
+    width: auto;
+  }
+}
+
+.pb-site-nav-link--respond-font-size {
+  font-size: modular-scale(-1);
+
+  @include bp(large) {
+    font-size: modular-scale(0);
+  }
+}
+
+.pb-site-nav-link--active {
+  color: $c-accent;
+}
+
+.pb-site-nav-link--bordered.pb-site-nav-link--active {
+  .pb-site-nav-link__title::after {
+    @include site-nav-link-marker-pseudo-el(currentColor);
+  }
+}

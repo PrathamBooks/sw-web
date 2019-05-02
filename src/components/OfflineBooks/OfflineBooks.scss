@@ -1,0 +1,28 @@
+@import "../../scss/common";
+
+$block: "pb-offline-books";
+
+.#{$block} {
+  background-color: $c-bg-offline;	
+}
+
+.#{$block}-document {
+  background-color: $c-mid-night;
+}
+
+.#{$block}__edit-actions {
+  text-align: center;
+}
+
+
+.#{$block}__delete-modal-title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(2);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin-top: 0;
+}
+
+.#{$block}--offline__grid {
+	padding-bottom: $space-xl;
+}

@@ -1,0 +1,89 @@
+@import "../../scss/common";
+
+$block: "pb-dropdown";
+
+.#{$block} {
+  position: relative;
+
+  > * {
+    margin: 0;
+  }
+}
+
+.#{$block}__contents {
+  background-color: $c-white;
+  border: $border-light;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-l2;
+  margin-top: $space-s;
+  max-width: $size-xl;
+  min-width: $size-m;
+  overflow: hidden;
+  padding: $space-m;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 100%;
+  transform-origin: center top;
+  transition: transform $transition-duration-fast $transition-function, opacity $transition-duration-fast $transition-function;
+  z-index: $z-index-dropdown;
+}
+
+.#{$block}__contents-enter {
+  opacity: 0;
+  transform: translateY(-1 * $space-m);
+}
+
+.#{$block}__contents-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.#{$block}__contents-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.#{$block}__contents-exit-active {
+  opacity: 0;
+  transform: translateY(-1 * $space-m);
+}
+
+.#{$block}--no-padding {
+  .#{$block}__contents {
+    padding: 0;
+  }
+}
+
+.#{$block}--align-left {
+  .#{$block}__contents {
+    left: 0;
+    right: auto;
+  }
+}
+
+
+.#{$block}--min-width-l {
+  .#{$block}__contents {
+    min-width: $size-l;
+  }
+}
+
+.#{$block}--min-width-xl {
+  .#{$block}__contents {
+    min-width: $size-xl;
+  }
+}
+
+.#{$block}--min-width-xxl {
+  .#{$block}__contents {
+    min-width: $size-xxl;
+  }
+}
+
+.#{$block}--min-width-auto {
+  .#{$block}__contents {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}

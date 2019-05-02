@@ -1,0 +1,83 @@
+@import "../../scss/common";
+
+$block: "pb-toggle-switch";
+
+.#{$block} {
+  @include clearfix;
+  padding: $space-m;
+  position: relative;
+
+  &__label {
+    @include remove-tap-highlight;
+  }
+
+  &__off-label,
+  &__on-label {
+    @include ellipsis;
+    float: left;
+    font-size: modular-scale(-1);
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-caps;
+    margin-top: 0;
+    text-transform: uppercase;
+    width: 50%;
+  }
+
+  &__on-label {
+    padding-left: ($width-toggle-switch / 2) + $space-m;
+  }
+
+  &__off-label {
+    padding-right: ($width-toggle-switch / 2) + $space-m;
+    text-align: right;
+  }
+
+  &__input{
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    margin-top: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: $z-index-reset;
+  }
+
+  &__groove {
+    background-color: $c-grey-light;
+    border-radius: $border-radius-circular;
+    height: $height-toggle-switch;
+    left: 50%;
+    margin-left: -1 * $width-toggle-switch / 2;
+    margin-top: 0;
+    padding: 2px;
+    position: absolute;
+    top: $space-m;
+    width: $width-toggle-switch;
+  }
+
+  &__knob {
+    background-color: $c-primary;
+    border-radius: $border-radius-circular;
+    height: $height-toggle-switch - (4rem / $ui-font-size);
+    width: $height-toggle-switch - (4rem / $ui-font-size);
+  }
+}
+
+.#{$block}--on {
+  .#{$block}__on-label {
+    color: $c-primary;
+  }
+
+  .#{$block}__knob {
+    float: right;
+  }
+}
+
+.#{$block}--off {
+  .#{$block}__off-label {
+    color: $c-primary;
+  }
+}

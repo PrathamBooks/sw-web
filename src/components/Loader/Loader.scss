@@ -1,0 +1,55 @@
+@import "../../scss/common";
+
+@keyframes pb-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.pb-loader {
+  color: $c-accent;
+  display: inline-block;
+  position: relative;
+  vertical-align: $vertical-align-icon;
+}
+
+.pb-loader__icon {
+  animation: pb-spin .75s infinite linear;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: middle;
+}
+
+
+.pb-loader--m {
+  height: $size-icon-m;
+  width: $size-icon-m;
+}
+
+.pb-loader--s {
+  height: $size-icon-s;
+  width: $size-icon-s;
+}
+
+.pb-loader--l {
+  height: $size-icon-l;
+  width: $size-icon-l;
+
+  .pb-loader__icon {
+    animation-duration: 1s;
+  }
+}
+
+.pb-loader--xl {
+  height: $size-icon-xl;
+  width: $size-icon-xl;
+
+  .pb-loader__icon {
+    animation-duration: 1.25s;
+  }
+}

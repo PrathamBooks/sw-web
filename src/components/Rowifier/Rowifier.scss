@@ -1,0 +1,51 @@
+@import "../../scss/common";
+
+$block: "pb-rowifier";
+
+.#{$block}__row {
+  margin-top: 0;
+  padding: $space-m 0;
+  padding-bottom: $space-l;
+  padding-top: $space-l;
+}
+
+.#{$block}--align-right {
+  text-align: right;
+}
+
+.#{$block}--align-center {
+  text-align: center;
+}
+
+%separator-common {
+  background-color: $c-border;
+  content: " ";
+  display: block;
+  height: $border-width;
+  margin: 0 auto;
+  max-width: $size-xxl;
+  position: relative;
+  width: 100%;
+}
+
+.#{$block}--separator {
+  .#{$block}__row + .#{$block}__row {
+
+    &::before {
+      @extend %separator-common;
+      top: -1 * $space-l;
+    }
+  }
+}
+
+.#{$block}--border-bottom {
+  &::after {
+    @extend %separator-common;
+  }
+}
+
+.#{$block}--border-top {
+  &::before {
+    @extend %separator-common;
+  }
+}

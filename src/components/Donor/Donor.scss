@@ -1,0 +1,7 @@
+@import "../../scss/common";
+
+$block: "pb-donor";
+
+.#{$block}__donor-logo {
+  max-width: $size-m;
+}

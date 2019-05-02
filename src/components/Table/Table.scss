@@ -1,0 +1,47 @@
+@import "../../scss/common";
+//@import "react-table/react-table";
+
+$block: "pb-table";
+
+.#{$block} {
+  border: none;
+  font-size: modular-scale(0);
+  height: 100%;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+
+}
+
+.#{$block}__header {
+  color: $c-grey-dark;
+  font-size: modular-scale(-1);
+  font-weight: $font-weight-bold;
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  // Had to use white-space normal with !important so that text wraps
+  // if column size is small, default white-space is white-space: nowrap
+  white-space: normal !important;
+}
+
+.#{$block}__td {
+  border: none;
+  margin: 0;
+  // Had to use white-space normal with !important so that text wraps
+  // if column size is small, default white-space is white-space: nowrap
+  white-space: normal !important;
+}
+
+.#{$block}__tr--even {
+  background-color: $c-grey-lighter;
+}
+
+.#{$block}__tr--odd {
+  background-color: $c-white;
+}
+
+.#{$block}__tr-group {
+  border: none;
+  margin: 0;
+}

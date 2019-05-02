@@ -1,0 +1,34 @@
+@import "../../scss/common";
+
+$block: "pb-list-box";
+
+.#{$block} {
+  @include enable-smooth-scroll-on-touch;
+  max-height: $size-l;
+  overflow-y: auto;
+
+  @include bp(large) {
+    @include styled-scroll-bar;
+  }
+}
+
+.#{$block}__item {
+  background-color: $c-bg;
+  color: $c-text;
+  display: block;
+  font-weight: $font-weight;
+  margin-top: 0;
+  padding: $space-m $space-l;
+  text-decoration: none;
+}
+
+.#{$block}__item--selected {
+  background-color: $c-primary;
+  color: $c-white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $c-white;
+  }
+}

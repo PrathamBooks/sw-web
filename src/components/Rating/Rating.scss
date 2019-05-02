@@ -1,0 +1,35 @@
+@import "../../scss/common";
+
+
+$block: "pb-rating";
+
+.#{$block} {
+
+  &__star {
+    color: $c-grey-light;
+    display: inline-block;
+    font-size: $space-xl;
+    line-height: $line-height-heading;
+    margin-top: $space-m;
+    padding: $space-s;
+    transition: color .2s ease-out;
+    vertical-align: middle;
+
+    // &:hover {
+    //   cursor: pointer;
+    // }
+
+    &.is-selected {
+      color: $c-warning-light;
+    }
+
+    &.is-disabled:hover {
+      cursor: default;
+    }
+  }
+
+  
+  &--disabled {
+    pointer-events: none;
+  } 
+}

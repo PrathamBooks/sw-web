@@ -1,0 +1,13 @@
+@import "../../scss/common";
+
+$block: "pb-books-search-results";
+
+.#{$block}__bulk-download-count {
+  border-bottom: $border;
+  padding-bottom: $space-m;
+}
+
+.#{$block}__select-format {
+  padding: 0 $space-l $space-l 0;
+  width: 100%;
+}

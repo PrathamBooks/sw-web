@@ -1,0 +1,38 @@
+@import "../../scss/common";
+
+$block: "pb-floating-button";
+
+.#{$block} {
+  background-color: $c-primary;
+  border-radius: $border-radius-circular;
+  bottom: $space-xl;
+  box-shadow: $box-shadow-l3;
+  color: $c-white;
+  display: block;
+  left: 50%;
+  line-height: $size-floating-button;
+  margin-left: -1 * $size-floating-button / 2;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  width: $size-floating-button;
+  z-index: $z-index-floating-button;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($c-primary, $darkness-hover);
+    color: $c-white;
+  }
+}
+
+.#{$block}__wrapper {
+  position: relative;
+}
+
+.#{$block}__count {
+  margin-top: 0;
+  position: absolute;
+  right: $space-m;
+  top: $space-m;
+}

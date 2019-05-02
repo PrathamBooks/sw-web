@@ -1,0 +1,14 @@
+@import "../../scss/common";
+
+// .pb-img {}
+
+.pb-img__wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.pb-img__img {
+  display: block;
+  position: absolute;
+}

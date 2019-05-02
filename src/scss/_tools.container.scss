@@ -1,0 +1,14 @@
+@mixin container($padding-horizontal: null, $padding-vertical: null, $max-width: $max-width-container) {
+  margin: 0 auto;
+  max-width: $max-width;
+
+  @if ($padding-horizontal) {
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal;
+  }
+
+  @if ($padding-vertical) {
+    padding-bottom: $padding-vertical;
+    padding-top: $padding-vertical;
+  }
+}

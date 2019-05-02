@@ -1,0 +1,33 @@
+@import "../../scss/common";
+
+.pb-stuffer {}
+
+.pb-stuffer--h-m {
+  padding-left: $space-xl;
+  padding-right: $space-xl;
+}
+
+.pb-stuffer--h-l {
+  padding-left: $space-xxl;
+  padding-right: $space-xxl;
+}
+
+.pb-stuffer--h-xl {
+  padding-left: $space-xxxl;
+  padding-right: $space-xxxl;
+}
+
+.pb-stuffer--v-m {
+  padding-bottom: $space-xl;
+  padding-top: $space-xl;
+}
+
+.pb-stuffer--v-l {
+  padding-bottom: $space-xxl;
+  padding-top: $space-xxl;
+}
+
+.pb-stuffer--v-xl {
+  padding-bottom: $space-xxxl;
+  padding-top: $space-xxxl;
+}

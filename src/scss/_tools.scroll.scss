@@ -1,0 +1,32 @@
+@mixin enable-smooth-scroll-on-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin hide-scroll-bar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin styled-scroll-bar {
+  &::-webkit-scrollbar-track {
+    background-color: $c-grey-light;
+    border-radius: $border-radius-circular;
+  }
+
+  &::-webkit-scrollbar {
+    background-color: $c-grey-light;
+    border-radius: $border-radius-circular;
+    width: $border-width-xl;
+
+    &:horizontal {
+      height: $border-width-xl;
+      width: auto;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $c-primary;
+    border-radius: $border-radius-circular;
+  }
+}

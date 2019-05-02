@@ -1,0 +1,37 @@
+@import "../../scss/common";
+
+$block: "pb-hr";
+
+.#{$block} {
+  position: relative;
+  text-align: center;
+  z-index: $z-index-reset;
+
+  &::after {
+    background: $c-border;
+    content: "";
+    display: block;
+    height: $border-width;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__label {
+    background: $c-white;
+    border: $border;
+    border-radius: $border-radius-circular;
+    color: $c-border;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    line-height: $size-xxs;
+    min-height: $size-xxs;
+    min-width: $size-xxs;
+    min-width: calc(#{$size-xxs} + 2 * #{$border-width});
+    padding: 0 $space-m;
+    text-align: center;
+  }
+}
+
+// .#{$block}--modifier {}

@@ -1,0 +1,31 @@
+@import "../../scss/common";
+
+$block: "pb-carousel-marker";
+
+.#{$block} {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -1 * $space-m;
+}
+
+.#{$block}__item {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.#{$block}__button {
+  background: transparent;
+  border: 0;
+  color: $c-text;
+  cursor: pointer;
+  font-size: modular-scale(2);
+  opacity: $opacity-disabled-dark;
+  outline: 0;
+  padding: $space-m;
+}
+
+.#{$block}__button--active {
+  opacity: 1;
+}
+

@@ -1,0 +1,26 @@
+@import "../../scss/common";
+
+$block: "pb-filters-panel";
+
+.#{$block} {
+  margin-top: -1 * $space-l;
+}
+
+.#{$block}__filters {
+  height: 100%;
+  margin-top: 0;
+}
+
+.#{$block}__count {
+  font-weight: $font-weight-bold;
+  margin-right: $space-m;
+  margin-top: 0;
+}
+
+.#{$block}__status {
+  border-bottom: $border;
+  margin-top: 0;
+  padding: $space-m 0;
+}
+
+// .#{$block}--modifier {}

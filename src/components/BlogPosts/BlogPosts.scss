@@ -1,0 +1,31 @@
+@import "../../scss/common";
+
+$block: "pb-blog-posts";
+
+.#{$block} {
+  margin-bottom: $space-xl;
+
+  * + & {
+    margin-top: $space-xl;
+  }
+}
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(1);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin-top: $space-m;
+
+  @include bp(medium) {
+    font-size: modular-scale(2);
+  }
+}
+
+.#{$block}__header {
+  text-align: center;
+}
+
+.#{$block}__posts {
+  margin-top: $space-xl;
+}

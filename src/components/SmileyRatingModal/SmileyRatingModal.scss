@@ -1,0 +1,44 @@
+@import "../../scss/common";
+
+$block: "pb-smiley-rating-modal";
+
+  .#{$block}__message,
+  .#{$block}__title {
+    font-family: $font-family-alt;
+    font-size: modular-scale(1);
+    font-weight: $font-weight;
+    line-height: $line-height-heading;
+    padding-bottom: $space-l;
+    text-align: center;
+  }
+
+  .#{$block}__message {
+    padding: $space-xxl;
+  }
+
+  .#{$block}__submit-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    padding-bottom: $space-l;
+  }
+
+  .#{$block}__submit {
+    max-width: $size-l;
+  }
+
+  .#{$block}__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .#{$block}__icon {
+    margin-top: 0;
+  }
+
+  .#{$block}__link {
+    margin-top: 0;
+  }
+
+

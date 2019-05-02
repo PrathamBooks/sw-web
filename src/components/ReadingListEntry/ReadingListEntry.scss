@@ -1,0 +1,172 @@
+@import "../../scss/common";
+
+$block: "pb-reading-list-entry";
+
+.#{$block} {
+  @include clearfix;
+  padding: $space-m 0;
+  position: relative;
+
+  & + & {
+    margin-top: $space-xxl;
+  }
+}
+
+.#{$block}__book-card {
+  display: inline-block;
+  margin-top: 0;
+  max-width: $size-xl;
+  vertical-align: middle;
+  width: percentage(2/3);
+}
+
+.#{$block}__index {
+  font-family: $font-family-alt;
+  font-size: modular-scale(1);
+  font-weight: $font-weight;
+  line-height: $line-height-solid;
+  margin-right: $space-xl;
+}
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(1);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin-top: $space-l;
+  text-align: center;
+
+  @include bp(medium) {
+    margin-top: $space-xl;
+    text-align: left;
+  }
+
+  .#{$block}__link {
+    color: $c-text;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c-text;
+      text-decoration: underline;
+    }
+  }
+}
+
+.#{$block}__desc-title {
+  float: left;
+  font-size: modular-scale(0);
+  margin-right: $space-m;
+}
+
+.#{$block}__desc {
+  @include clearfix;
+
+  .#{$block}__desc-title + * {
+    margin-top: 0;
+  }
+}
+
+.#{$block}__overlay-content {
+  background-color: $c-white;
+  border: $border-width $border-style $c-danger;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-l1;
+  color: $c-danger;
+  font-weight: $font-weight-bold;
+  padding: $space-s $space-m;
+}
+
+.#{$block}__overlay {
+  align-items: center;
+  background-color: $c-overlay-light;
+  border-radius: $border-radius;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.#{$block}__col-1,
+.#{$block}__col-2 {
+  @include bp(medium) {
+    float: left;
+    margin-top: 0;
+  }
+}
+
+.#{$block}__col-1 {
+  text-align: center;
+
+  @include bp(medium) {
+    padding-right: $space-m;
+    width: percentage(1 / 3);
+  }
+}
+
+.#{$block}__col-2 {
+  @include bp(medium) {
+    padding-left: $space-m;
+    width: percentage(2 / 3);
+  }
+}
+
+.#{$block}__content {
+  @include clearfix;
+}
+
+.#{$block}__footer {
+  padding-top: $space-l;
+}
+
+.#{$block}__loader {
+  display: inline-flex;
+}
+
+.#{$block}--indexed {
+  .#{$block}__col-1 {
+    padding-right: $space-xl; // To compensate for the presence of the index
+  }
+}
+
+.#{$block}--index-1 {
+  .#{$block}__book-card {
+    transform: rotate(2deg);
+  }
+}
+
+.#{$block}--index-2 {
+  .#{$block}__book-card {
+    transform: rotate(-2deg);
+  }
+}
+
+.#{$block}--edit-active {
+  background-color: $c-white;
+  border-radius: $border-radius;
+  border-top: $border-width-xl solid transparent;
+  box-shadow: $box-shadow-l1;
+  padding: $space-l;
+  padding-bottom: 0;
+  padding-top: calc(#{$space-l} - #{$border-width-xl});
+
+  @include bp(medium) {
+    border-left: $border-width-xl solid transparent;
+    border-top: none;
+    padding-left: calc(#{$space-l} - #{$border-width-xl});
+    padding-top: $space-l;
+  }
+
+  &.#{$block}--active {
+    border-top-color: $c-primary;
+
+    @include bp(medium) {
+      border-left-color: $c-primary;
+      border-top-color: transparent;
+    }
+  }
+}

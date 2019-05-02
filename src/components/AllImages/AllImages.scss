@@ -1,0 +1,23 @@
+@import "../../scss/common";
+
+$block: "pb-all-images";
+
+// .#{$block} {
+//   &__element {}
+// }
+
+// .#{$block}--modifier {}
+
+.#{$block}__bulk-download-select-format {
+  margin-bottom: $space-m;
+}
+
+.#{$block}__bulk-download-count {
+  border-bottom: $border;
+  padding-bottom: $space-m;
+}
+
+.#{$block}__select-format {
+  padding: 0 $space-l $space-l 0;
+  width: 100%;
+}

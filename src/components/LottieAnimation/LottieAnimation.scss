@@ -1,0 +1,24 @@
+@import "../../scss/common";
+
+$block: "pb-lottie-animation";
+
+
+.#{$block} {
+    align-self: center;
+    border: $border;
+    border-radius: $border-radius-l;
+    box-shadow: $box-shadow-l1;
+    margin: 0;
+    padding: $space-xs;
+    width: $size-s ;
+
+    & + & {		
+        margin-left: $space-xl;		
+    }
+
+}
+
+.#{$block}--selected {
+    padding: 0;
+    width: $size-m ;
+}

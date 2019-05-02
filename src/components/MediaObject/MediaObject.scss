@@ -1,0 +1,36 @@
+@import "../../scss/common";
+
+.pb-media-object {
+  @include clearfix;
+}
+
+.pb-media-object__media,
+.pb-media-object__body {
+  overflow: hidden;
+  text-align: center;
+
+  @include bp(medium) {
+    float: left;
+    text-align: left;
+  }
+}
+
+.pb-media-object__media {
+  padding-right: $space-s;
+
+  @include bp(medium) {
+    width: auto; 
+  }
+}
+
+.pb-media-object__body {
+  padding-left: $space-s;
+
+  
+  .pb-media-object--fit-to-media {
+    @include bp(medium) {
+      display: flex;
+      width: 100%
+    }
+  }
+}

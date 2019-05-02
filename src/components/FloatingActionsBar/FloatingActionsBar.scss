@@ -1,0 +1,30 @@
+@import "../../scss/common";
+
+$block: "pb-floating-actions-bar";
+
+.#{$block} {
+  margin-top: 0;
+}
+
+.#{$block}--floating {
+  background-color: $c-white;
+  bottom: 0;
+  box-shadow: $box-shadow-l3-reverse;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: $z-index-floating-action-bar;
+
+  .#{$block}__container {
+    @include container($space-l, $space-l);
+
+    > * + * {
+      margin-top: 0;
+    }
+  }
+}
+
+.#{$block}-document--pad {
+  padding-bottom: 2 * $space-l + $height-input-field;
+}

@@ -1,0 +1,7 @@
+@import "../../scss/common";
+
+$block: "pb-publisher";
+
+.#{$block}__publisher-logo {
+  max-width: $size-m;
+}

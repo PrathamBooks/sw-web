@@ -1,0 +1,9 @@
+@import "../../scss/common";
+
+$block: "pb-{{ camelCaseToDashCase name }}";
+
+// .#{$block} {
+//   &__element {}
+// }
+
+// .#{$block}--modifier {}

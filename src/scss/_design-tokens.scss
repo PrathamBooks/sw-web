@@ -1,0 +1,237 @@
+@import "../lib/ui.config.json";
+
+// ---
+// Typography
+// ---
+
+$font-family-rare-language-fallbacks: "Noto Sans Gujarati", "Noto Sans Kannada", "Noto Sans Oriya",
+                                      "Noto Sans Tibetan", "Noto Sans Gurmukhi", "Noto Sans Sinhala",
+                                      "Noto Sans Telugu", "Noto Sans Tamil", "Noto Sans Devanagari",
+                                      "Noto Sans Ol Chiki";
+$font-family:                         "Raleway", $font-family-rare-language-fallbacks, sans-serif;
+$font-family-alt:                     "Bree Serif", $font-family-rare-language-fallbacks, serif;
+$font-family-monospace:               "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+$font-size-monospace: 75%;
+$font-weight:         normal;
+$font-weight-bold:    bold;
+
+$line-height:         $ui-line-height / $ui-font-size;
+$line-height-heading: 1.25;
+$line-height-heading-bothi:  1.7;
+$line-height-px:      $ui-line-height * 1px;
+$line-height-solid:   1;
+
+$letter-spacing-caps: .05625em; // .9px / 16px
+
+// Font sizes
+// Use Bourbon's modular-scale() to size fonts based on $ui-font-sizing-ratio
+
+// ---
+// Colors
+// ---
+
+$c-primary:       map-get($ui-colors, primary);
+$c-accent:        map-get($ui-colors, accent);
+$c-grey:          map-get($ui-colors, grey);
+$c-grey-lighter:  map-get($ui-colors, grey-lighter);
+$c-grey-light:    map-get($ui-colors, grey-light);
+$c-grey-dark:     map-get($ui-colors, grey-dark);
+$c-black-12:      map-get($ui-colors, black-12);
+$c-black-87:      map-get($ui-colors, black-87);
+$c-mid-night:     map-get($ui-colors, mid-night);
+$c-facebook:      map-get($ui-colors, facebook);
+$c-google:        map-get($ui-colors, google);
+$c-level-1:       map-get($ui-colors, level-1);
+$c-level-2:       map-get($ui-colors, level-2);
+$c-level-3:       map-get($ui-colors, level-3);
+$c-level-4:       map-get($ui-colors, level-4);
+$c-danger:        map-get($ui-colors, danger);
+$c-info:          map-get($ui-colors, info);
+$c-success:       map-get($ui-colors, success);
+$c-warning:       map-get($ui-colors, warning);
+
+$c-black:         #000;
+$c-white:         #fff;
+
+$c-bg:            $c-grey-lighter;
+$c-bg-dark:       $c-mid-night;
+$c-link-hover:    darken($c-primary, 15%);
+$c-link:          $c-primary;
+$c-link-light:    lighten($c-primary, 30%);
+$c-shadow:        rgba(0, 0, 0, .24);
+$c-text:          $c-black-87;
+$c-text-light:    $c-grey;
+$c-text-lighter:  $c-grey-light;
+$c-border:        $c-grey-light;
+$c-border-light:  darken($c-grey-lighter, 10%);
+$c-overlay:       rgba(0, 0, 0, .54);
+$c-overlay-lighter: rgba(255, 255, 255, .65);
+$c-overlay-light: rgba(255, 255, 255, .75);
+$c-bg-offline:    rgba(43, 126, 227, 0.3);
+$c-success-light:    rgba(83, 186, 30, 0.52);
+$c-info-light:       rgba(74, 144, 226, 0.52);
+$c-danger-light:     rgba(227, 6, 19, 0.52);
+$c-warning-light:     rgba(227, 207, 0, 0.52);
+
+// Opacity
+$opacity:                   0.5;
+$opacity-background:        0.95;
+$opacity-disabled:          0.75;
+$opacity-disabled-dark:     0.375;
+$opacity-lightest:            0.1;
+$opacity-theme-light:       0.375;
+$opacity-theme-light-lighter:  0.275;
+$opacity-theme-light-light: 0.75;
+$opacity-opaque:            1.0;
+
+// ---
+// Sizing and Spacing
+// ---
+
+// Spaces
+$space-default: ($ui-space / 16) * 1rem;
+$space-xxxs:    $space-default / 16;
+$space-xxs:     $space-default / 8;
+$space-xs:      $space-default / 4;
+$space-s:       $space-default / 2;
+$space-m:       $space-default;
+$space-l:       $space-default * 2;
+$space-xl:      $space-default * 4;
+$space-xxl:     $space-default * 8;
+$space-xxxl:    $space-default * 16;
+
+// Sizes
+$size-base: 1rem;
+
+$sizes: (
+  xxxs: $size-base,
+  xxs:  $size-base * 2,
+  xs:   $size-base * 3,
+  s:    $size-base * 5,
+  m:    $size-base * 8,
+  l:    $size-base * 13,
+  xl:   $size-base * 21,
+  xxl:  $size-base * 34,
+  xxxl: $size-base * 55
+);
+
+$size-xxxs: map-get($sizes, xxxs);
+$size-xxs:  map-get($sizes, xxs);
+$size-xs:   map-get($sizes, xs);
+$size-s:    map-get($sizes, s);
+$size-m:    map-get($sizes, m);
+$size-l:    map-get($sizes, l);
+$size-xl:   map-get($sizes, xl);
+$size-xxl:  map-get($sizes, xxl);
+$size-xxxl: map-get($sizes, xxxl);
+
+$size-icon-s:   12px;
+$size-icon-m:   24px;
+$size-icon-l:   48px;
+$size-icon-xl:  72px;
+$size-icon-xxl: 120px;
+
+$size-avatar-m:  32px;
+$size-avatar-l: 144px;
+
+$size-floating-button: $size-xs;
+
+// Heights
+$height-caret:             (6 / 16) * 1rem;
+$height-logo:              (40 / 16) * 1rem;
+$height-logo-s:            (24 / 16) * 1rem;
+$height-input-field:       ($ui-line-height * 2 / 16) * 1rem;
+$height-input-field-large: 2 * $height-input-field;
+$height-input-field-label: $space-l + $space-xs;
+$height-toggle-switch:     $size-xxxs;
+$height-tab-link:          $space-xxl;
+
+// Widths
+$width-caret:         (12 / 16) * 1rem;
+$width-toggle-switch: $size-xs;
+
+$max-width-container: 75rem; // 1200px / 16px
+
+// ---
+// Alignment
+// ---
+
+// Vertical Aligment
+$vertical-align-icon: -1em * (7 / 16);
+
+// ---
+// Border
+// ---
+
+$border-width:     1px;
+$border-width-m:   2px;
+$border-width-l:   4px;
+$border-width-xl:  6px;
+$border-width-tab: $border-width-l;
+
+$border-radius:   4px;
+$border-radius-l: 8px;
+$border-radius-circular: 2000px;
+
+$border-style:        solid;
+$border-style-dashed: dashed;
+
+$border: $border-width $border-style $c-border;
+$border-light: $border-width $border-style $c-border-light;
+
+// ---
+// Transitions
+// ---
+
+$transition-duration:         $ui-base-transition-duration;
+$transition-duration-instant: $ui-base-transition-duration-instant;
+$transition-duration-fast:    $ui-base-transition-duration-fast;
+$transition-duration-slow:    $ui-base-transition-duration-slow;
+
+$transition-function:  $ui-base-transition-function;
+
+// ---
+// Layering
+// ---
+
+// Z-indices
+$z-index-reset:               1;
+$z-index-dropdown:            20;
+$z-index-floating-button:     30;
+$z-index-floating-action-bar: 40;
+$z-index-site-header:         50;
+$z-index-overlay:             100;
+$z-index-modal:               110;
+$z-index-modal-notification:  120;
+$z-index-notification:        150;
+
+// ---
+// More themeing
+// ---
+
+// Shadows
+$box-shadow-l1:                       0 1px 4px $c-shadow;
+$box-shadow-l2:                       0 3px 6px $c-shadow;
+$box-shadow-l3:                       0 5px 8px $c-shadow;
+$box-shadow-l2-reverse:               0 -2px 4px $c-shadow;
+$box-shadow-l3-reverse:               0 -2px 8px $c-shadow;
+$box-shadow-header:                   0 2px 2px $c-shadow;
+$box-shadow-input-field:              inset 0 0 0 $border-width;
+
+// Gradients
+$gradient-site-footer-bg:                  linear-gradient($c-bg-dark 0%, rgba($c-bg-dark, 0) 70%);
+$gradient-shrinker-bg:                     linear-gradient(rgba($c-white, 0) 0%, $c-white 70%);
+$gradient-mid-night:                       linear-gradient(rgba($c-mid-night, .4) 0%, $c-mid-night 100%);
+$gradient-dark-to-transparent:             linear-gradient(rgba($c-black-87, .54) 0%, rgba($c-black, 0)  100%);
+$gradient-dark-to-lighter-transparent:     linear-gradient(to bottom, rgba($c-black, 0.216) 0%, rgba($c-black, 0)  50%);
+$gradient-dark-to-semi-transparent:        linear-gradient(rgba($c-black, .75) 0%, rgba($c-black, .01)  100%);
+$gradient-dark-to-semi-transparent-danger: linear-gradient($c-danger 0%, rgba($c-danger, .01)  100%);
+$gradient-dark:                            linear-gradient(rgba($c-black-87, .26), rgba($c-black, .26));
+
+// Darkness
+$darkness-hover:      2.5%;
+$darkness-hover-more: 15%;
+
+// Blur
+$blur: 2px;

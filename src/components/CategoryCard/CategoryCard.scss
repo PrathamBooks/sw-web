@@ -1,0 +1,81 @@
+@import "../../scss/common";
+
+$block: "pb-category-card";
+
+.#{$block} {
+  margin: 0%;
+}
+
+.#{$block}__image-wrapper {
+  align-items: center;
+  height: 0;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 42.7083333%; // Aspect Ratio (384/164 = 0.427083333) 
+  position: relative;
+}
+
+.#{$block}__image {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin-top: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .pb-img__img {
+    border-radius: $border-radius-l;
+  }
+}
+
+.#{$block}__image-overlay {
+  background-color: $c-black;
+  border-radius: $border-radius-l;
+  display: block;
+  height: 100%;
+  margin-top: 0;
+  opacity: $opacity-theme-light-lighter;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.#{$block}__img {
+  height: 100%;
+  left: 0;
+  margin-top: 0;
+  top: 0;
+  width: 100%;
+}
+
+.#{$block}__content{
+  align-items: center;
+  display: flex;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding-left: $space-l;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.#{$block}__icon{
+  color: $c-white;
+  float: left;
+}
+
+.#{$block}__title {
+  color: $c-white;
+  font-family: $font-family-alt;
+  font-size: modular-scale(2);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin: $space-l $space-l $space-l $space-m;
+  padding: 0;
+  @include bp(medium) {
+    max-height: 3 * $line-height-heading * 1em;
+    overflow: hidden;
+  }
+}

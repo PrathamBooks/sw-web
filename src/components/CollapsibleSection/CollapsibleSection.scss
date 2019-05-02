@@ -1,0 +1,109 @@
+@import "../../scss/common";
+
+$block: "pb-collapsible-section";
+
+// .#{$block} {}
+
+.#{$block}__title {
+  display: block;
+  font-weight: $font-weight-bold;
+  padding: $space-m 0;
+}
+
+.#{$block}__content {
+  display: none;
+  padding-bottom: $space-l;
+}
+
+.#{$block}__caret {
+  margin-right: $space-m;
+}
+
+.#{$block}--upper-case-title {
+  .#{$block}__title {
+    font-size: modular-scale(-1);
+    letter-spacing: $letter-spacing-caps;
+    text-transform: uppercase;
+  }
+}
+
+.#{$block}--open {
+  .#{$block}__content {
+    display: block;
+  }
+}
+
+.#{$block}--expand-on-medium-viewport {
+  .#{$block}__title {
+    @include bp(medium) {
+      cursor: text;
+    }
+  }
+
+  .#{$block}__caret {
+    @include bp(medium) {
+      display: none;
+    }
+  }
+
+  .#{$block}__content {
+    @include bp(medium) {
+      display: block;
+    }
+  }
+}
+
+.#{$block}--expand-on-large-viewport {
+  .#{$block}__title {
+    @include bp(large) {
+      cursor: text;
+    }
+  }
+
+  .#{$block}__caret {
+    @include bp(large) {
+      display: none;
+    }
+  }
+
+  .#{$block}__content {
+    @include bp(large) {
+      display: block;
+    }
+  }
+}
+
+.#{$block}--disable-collapse {
+  .#{$block}__title {
+    color: $c-text;
+    cursor: text;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c-text;
+    }
+  }
+
+  .#{$block}__caret {
+    display: none;
+  }
+
+  .#{$block}__content {
+    display: block;
+  }
+}
+
+.#{$block}--light {
+  color: $c-white;
+
+  .#{$block}__title {
+    color: $c-white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c-white;
+    }
+  }
+}

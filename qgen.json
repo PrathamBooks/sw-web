@@ -1,0 +1,8 @@
+{
+  "helpers": "./qgen-helpers.js",
+  "templates": {
+    "component": {
+      "dest": "./src/components"
+    }
+  }
+}

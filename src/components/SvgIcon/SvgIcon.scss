@@ -1,0 +1,84 @@
+@import "../../scss/common";
+
+$block: "pb-svg-icon";
+
+.#{$block} {
+  color: inherit;
+  display: inline-block;
+  fill: currentColor;
+  height: $size-icon-m;
+  vertical-align: $vertical-align-icon;
+  width: $size-icon-m;
+}
+
+.#{$block}--s {
+  height: $size-icon-s;
+  width: $size-icon-s;
+}
+
+.#{$block}--l {
+  height: $size-icon-l;
+  width: $size-icon-l;
+}
+
+.#{$block}--xl {
+  height: $size-icon-xl;
+  width: $size-icon-xl;
+}
+
+.#{$block}--xxl {
+  height: $size-icon-xxl;
+  width: $size-icon-xxl;
+}
+
+.#{$block}--s-m {
+  height: $size-icon-s;
+  width: $size-icon-s;
+
+  @include bp(medium) {
+    height: $size-icon-m;
+    width: $size-icon-m;
+  }
+}
+
+.#{$block}--m-l {
+  height: $size-icon-m;
+  width: $size-icon-m;
+
+  @include bp(medium) {
+    height: $size-icon-l;
+    width: $size-icon-l;
+  }
+}
+
+.#{$block}--l-xl {
+  height: $size-icon-l;
+  width: $size-icon-l;
+
+  @include bp(medium) {
+    height: $size-icon-xl;
+    width: $size-icon-xl;
+  }
+}
+
+.#{$block}--xl-xxl {
+  height: $size-icon-xl;
+  width: $size-icon-xl;
+
+  @include bp(medium) {
+    height: $size-icon-xxl;
+    width: $size-icon-xxl;
+  }
+}
+
+.#{$block}--accent {
+  color: $c-accent;
+}
+
+.#{$block}--push-right {
+  margin-right: $space-m;
+}
+
+.#{$block}--push-left {
+  margin-left: $space-m;
+}

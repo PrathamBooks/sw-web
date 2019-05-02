@@ -1,0 +1,40 @@
+{
+  "__comment": "Always namespace variables with 'ui-', avoid collision in SCSS files",
+  "ui-breakpoints": {
+    "small":   "0",
+    "medium":  "768",
+    "large":   "1048",
+    "xlarge":  "1200",
+    "xxlarge": "1440"
+  },
+  "ui-colors": {
+    "primary":      "#4990e2",
+    "accent":       "#e94e1b",
+    "grey-lighter": "#f8fafd",
+    "grey-light":   "#d0d0d0",
+    "grey":         "#555d67",
+    "grey-dark":    "#433d3f",
+    "mid-night":   "#0b213b",
+    "black-87":     "rgba(0, 0, 0, .87)",
+    "black-12":     "rgba(0, 0, 0, .12)",
+    "facebook":     "#3b5998",
+    "google":       "#ea4335",
+    "level-1":      "#ffdd00",
+    "level-2":      "#ed1c24",
+    "level-3":      "#a6ce39",
+    "level-4":      "#3777bc",
+    "info":         "#4990e2",
+    "danger":       "#e94f1d",
+    "warning":      "#ffcf00",
+    "success":      "#48c819"
+  },
+  "ui-font-size": "16",
+  "ui-line-height": "24",
+  "ui-font-sizing-ratio": "1.414",
+  "ui-space": "8",
+  "ui-base-transition-duration": ".3s",
+  "ui-base-transition-duration-instant": ".05s",
+  "ui-base-transition-duration-fast": ".2s",
+  "ui-base-transition-duration-slow": ".6s",
+  "ui-base-transition-function": "ease-in-out"
+}

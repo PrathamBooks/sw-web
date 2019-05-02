@@ -1,0 +1,52 @@
+@import "../../scss/common";
+
+$block: "pb-inliner";
+
+.#{$block} {
+  display: inline-block;
+  vertical-align: middle;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.#{$block}--is-child-input {
+  vertical-align: -1 * $height-input-field-label / 2;
+}
+
+.#{$block}--w-xxxs {
+  width: $size-xxxs;
+}
+
+.#{$block}--w-xxs {
+  width: $size-xxs;
+}
+
+.#{$block}--w-xs {
+  width: $size-xs;
+}
+
+.#{$block}--w-s {
+  width: $size-s;
+}
+
+.#{$block}--w-m {
+  width: $size-m;
+}
+
+.#{$block}--w-l {
+  width: $size-l;
+}
+
+.#{$block}--w-l {
+  width: $size-l;
+}
+
+.#{$block}--w-xl {
+  width: $size-xl;
+}
+
+.#{$block}--w-xxl {
+  width: $size-xxl;
+}

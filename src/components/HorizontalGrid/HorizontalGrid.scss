@@ -1,0 +1,92 @@
+@import "../../scss/common";
+
+$block: "pb-horizontal-grid";
+
+.#{$block}__wrapper {
+  @include enable-smooth-scroll-on-touch;
+  overflow-y: auto;
+  padding-left: $space-m;
+  padding-right: $space-m;
+  white-space: nowrap;
+
+  @include bp(large) {
+    @include styled-scroll-bar;
+  }
+}
+
+.#{$block}__col {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: top;
+
+  & + & {
+    margin-left: $space-l;
+  }
+}
+
+.#{$block}__cell {
+  margin-top: 0;
+  white-space: normal;
+}
+
+.#{$block}--m {
+  .#{$block}__col {
+    width: $size-m;
+  }
+}
+
+.#{$block}--l {
+  .#{$block}__col {
+    width: $size-l;
+  }
+}
+
+.#{$block}--xl {
+  .#{$block}__col {
+    width: $size-xl;
+  }
+}
+
+.#{$block}--xxl {
+  .#{$block}__col {
+    width: $size-xxl;
+  }
+}
+
+.#{$block}--image-card,
+.#{$block}--book-card {
+  .#{$block}__col {
+    width: 44vw; // 176px (BookCard) / 400px (Viewport)
+
+    @include bp(medium) {
+      width: 22.3958333vw; // 172px (BookCard) / 768px (Viewport)
+    }
+
+    @include bp(large) {
+      width: 14.8854962vw; // 156px (BookCard) / 1048px (Viewport)
+    }
+
+    @include bp(xlarge) {
+      width: 182px; // Approx. max width
+    }
+  }
+}
+
+.#{$block}--category-card {
+  .#{$block}__col {
+    width: 87vw;
+
+    @include bp(medium) {
+      width: 88vm;
+    }
+
+    @include bp(large) {
+      width: 32vm;
+    }
+
+    @include bp(xlarge) {
+      width: 384px; // Approx. max width
+    }
+  }
+
+}

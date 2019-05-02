@@ -1,0 +1,35 @@
+@import "../../scss/common";
+
+$block: "pb-carousel-button";
+
+.#{$block} {
+  color: $c-text;
+  display: none;
+  padding: $space-l;
+
+  @include bp(medium) {
+    display: block;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $c-text;
+  }
+}
+
+.#{$block}--direction-next {
+  svg {
+    filter: drop-shadow((-2 * $border-width) 0 0 $c-white);
+  }
+}
+
+.#{$block}--direction-previous {
+  svg {
+    filter: drop-shadow((2 * $border-width) 0 0 $c-white);
+  }
+}
+
+.#{$block}--disabled {
+  opacity: $opacity-disabled-dark;
+}

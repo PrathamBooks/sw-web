@@ -1,0 +1,54 @@
+@import "./common";
+@import-normalize;
+
+html {
+  font-size: 16px !important;
+}
+
+.pb-body {
+  box-sizing: border-box;
+  color: $c-text;
+  font-family: $font-family;
+  line-height: $line-height;
+  margin: 0;
+
+  * {
+    margin: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  // Refer 'Margins' in the article http://www.heydonworks.com/article/on-writing-less-damn-code/
+  * + * {
+    margin-top: $space-m;
+  }
+}
+
+#root, #header, #footer {
+  font-size: 16px;
+  margin: 0;
+
+  .pb-site-header {
+    z-index: 16 !important;
+  }
+
+  p {
+    font-size: 1em !important;
+  }
+}
+
+#header {
+  #search-modal-input {
+      height: 100% !important;
+  }
+}
+
+#footer {
+  .pb-text-field__input {
+    height: $height-input-field !important;
+  }
+}

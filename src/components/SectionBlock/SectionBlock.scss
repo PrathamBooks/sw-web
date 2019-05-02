@@ -1,0 +1,38 @@
+@import "../../scss/common";
+
+$block: "pb-section-block";
+
+.#{$block} {
+  margin-top: 0;
+}
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(1);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin-top: 0;
+}
+
+.#{$block}__header {
+  margin-bottom: $space-l;
+}
+
+.#{$block}--no-content-horizontal-padding {
+  .#{$block}__content {
+    // Have to match this with padding of <Block>
+    margin-left: -1 * $space-l;
+    margin-right: -1 * $space-l;
+  }
+}
+
+.#{$block}--separate-header {
+  .#{$block}__header {
+    border-bottom: $border;
+    padding-bottom: $space-l;
+  }
+}
+
+.#{$block}--light {
+  color: $c-white;
+}

@@ -1,0 +1,262 @@
+@import "../../scss/common";
+
+$block: "pb-button";
+$shadow-button-active: inset $box-shadow-l1;
+
+.#{$block} {
+  background-color: $c-grey-lighter;
+  border: $border;
+  border-radius: $border-radius;
+  color: $c-grey;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family;
+  font-size: modular-scale(0);
+  font-weight: $font-weight-bold;
+  padding: $space-m $space-l;
+  text-align: center;
+  text-decoration: none;
+
+  > * {
+    margin: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-grey-lighter, $darkness-hover);
+    color: $c-grey;
+  }
+
+  &:active {
+    box-shadow: $shadow-button-active;
+  }
+
+  & + & {
+    margin-left: $space-l;
+  }
+}
+
+// .#{$block}__icon-left,
+// .#{$block}__icon-right {}
+
+.#{$block}__icon-left {
+  margin-left: -1 * $space-m;
+  margin-right: $space-m;
+}
+
+.#{$block}__icon-right {
+  margin-left: $space-m;
+  margin-right: -1 * $space-m;
+}
+
+.#{$block}--full-width {
+  @include ellipsis();
+  display: block;
+  padding-left: $space-m;
+  padding-right: $space-m;
+  width: 100%;
+
+  & + & {
+    margin-left: 0;
+  }
+}
+
+.#{$block}--match-input-fields {
+  line-height: $height-input-field - $height-input-field-label - 2 * (strip-unit($border-width) / 16);
+  margin-top: $height-input-field-label;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.#{$block}--info,
+.#{$block}--danger,
+.#{$block}--warning,
+.#{$block}--success,
+.#{$block}--accent,
+.#{$block}--facebook,
+.#{$block}--google,
+.#{$block}--primary {
+  color: $c-white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $c-white;
+  }
+
+  &:active {
+    box-shadow: $shadow-button-active;
+  }
+}
+
+.#{$block}--primary {
+  background-color: $c-primary;
+  border-color: $c-primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-primary, $darkness-hover);
+  }
+}
+
+.#{$block}--accent {
+  background-color: $c-accent;
+  border-color: $c-accent;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-accent, $darkness-hover);
+  }
+}
+
+.#{$block}--info {
+  background-color: $c-info;
+  border-color: $c-info;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-info, $darkness-hover);
+  }
+}
+
+.#{$block}--danger {
+  background-color: $c-danger;
+  border-color: $c-danger;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-danger, $darkness-hover);
+  }
+}
+
+.#{$block}--warning {
+  background-color: $c-warning;
+  border-color: $c-warning;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-warning, $darkness-hover);
+  }
+}
+
+.#{$block}--success {
+  background-color: $c-success;
+  border-color: $c-success;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-success, $darkness-hover);
+  }
+}
+
+.#{$block}--facebook {
+  background-color: $c-facebook;
+  border-color: $c-facebook;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-facebook, $darkness-hover);
+  }
+}
+
+.#{$block}--google {
+  background-color: $c-google;
+  border-color: $c-google;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-google, $darkness-hover);
+  }
+}
+
+.#{$block}--disabled {
+  background-color: darken($c-grey-lighter, $darkness-hover);
+  border-color: $c-border;
+  color: lighten($c-text, 50%);
+  cursor: not-allowed;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($c-grey-lighter, $darkness-hover);
+    box-shadow: none;
+    color: lighten($c-text, 50%);
+  }
+}
+
+.#{$block}--loading {
+  cursor: wait;
+}
+
+// .#{$block}--size-m {}
+.#{$block}--size-s {
+  font-size: modular-scale(-1);
+  padding-left: $space-m;
+  padding-right: $space-m;
+}
+
+.#{$block}--size-l {
+  font-size: modular-scale(1);
+}
+
+.#{$block}--size-xl {
+  padding-left: $space-xl;
+  padding-right: $space-xl;
+}
+
+.#{$block}--size-xxl {
+  padding-left: $space-xxl;
+  padding-right: $space-xxl;
+}
+
+.#{$block}--in-group-first,
+.#{$block}--in-group-middle {
+  border-right-width: 0;
+}
+
+.#{$block}--in-group-first {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.#{$block}--in-group-last {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.#{$block}--in-group-middle {
+  border-radius: 0;
+}
+
+.#{$block}--merge-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.#{$block}--merge-bottom {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.#{$block}--merge-sides {
+  &.#{$block}--in-group-first {
+    border-bottom-left-radius: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+  }
+
+  &.#{$block}--in-group-last {
+    border-bottom-right-radius: 0;
+    border-right-width: 0;
+    border-top-right-radius: 0;
+  }
+}

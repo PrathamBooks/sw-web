@@ -1,0 +1,144 @@
+@import "../../scss/common";
+
+$block: "pb-book";
+
+// .#{$block} {}
+
+.#{$block}__wrapper {
+  @include clearfix;
+
+  @include bp(large) {
+    padding-left: percentage(1 / 12);
+    padding-right: percentage(1 / 12);
+  }
+}
+
+.#{$block}__cover-wrapper,
+.#{$block}__content {
+  padding-top: $space-l;
+  text-align: center;
+
+  @include bp(large) {
+    float: left;
+    margin-top: 0;
+  }
+}
+
+.#{$block}__cover-wrapper {
+  transform: rotate(-2deg);
+
+  @include bp(large) {
+    width: percentage(3 / 10);
+  }
+}
+
+.#{$block}__content {
+  > * + * {
+    margin-top: $space-xl;
+  }
+
+  @include bp(large) {
+    margin-left: percentage(.5 / 10);
+    width: percentage(5.5 / 10);
+  }
+}
+
+.#{$block}__cover {
+  display: block;
+  margin: 0 auto;
+  max-width: $size-l;
+  width: 100%;
+
+  @include bp(large) {
+    max-width: $size-xl;
+  }
+}
+
+.#{$block}__likes {
+  margin-right: $space-l;
+}
+
+.#{$block}__stats {
+  display: inline-flex;
+  margin-top: $space-l;
+} 
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(3);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+
+  &--bhoti {
+    line-height: $line-height-heading-bothi;
+  }
+}
+
+.#{$block}__cta-wrapper {
+  display: inline-block;
+  line-height: $size-xxs;
+  width: 100%;
+
+  @include bp(medium) {
+    max-width: $size-m * 3;
+  }
+}
+
+.#{$block}__action-btns-container {
+  > * + *  {
+    margin-top: 0;
+  }
+  
+  display: flex;
+  justify-content: center;
+}
+
+.#{$block}--offline {
+  margin-top: $space-xl;
+}
+
+.#{$block}-document--offline {
+  background-color: $c-mid-night;
+}
+
+.#{$block}__publisher-logo {
+  max-width: $size-m;
+}
+
+.#{$block}__auth-dropdown {
+  display: inline-block;
+  margin: 0 $space-default;
+}
+
+.#{$block}__delete-modal-title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(1);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  padding-bottom: $space-m;
+}
+
+.#{$block}__tags-wrapper {
+  > * + * {
+    margin-left: $space-l;
+    margin-top: $space-l;
+  }
+}
+
+.#{$block}__loader-icon {
+  margin-right: $space-m;
+}
+
+.#{$block}__translate-wrapper {
+  margin: 0 auto;
+  max-width: $size-xl;
+}
+
+.#{$block}__translate-button {
+  margin-top: $space-m;
+}
+
+.#{$block}__translate-select-field {
+  margin-bottom: $space-l + $space-xs;
+  text-align: left;
+}

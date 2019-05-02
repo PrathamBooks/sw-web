@@ -1,0 +1,71 @@
+@import "../../scss/common";
+
+@import-normalize;
+
+@import "../../scss/util-classnames.visibility";
+@import "../../scss/util-classnames.text";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  // I give up. :sigh:
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: modular-scale(0);
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.pb-body, body {
+  background-color: $c-bg;
+  color: $c-text;
+  font-family: $font-family;
+  line-height: $line-height;
+  margin: 0;
+
+  * {
+    margin: 0;
+  }
+
+  // Refer 'Margins' in the article http://www.heydonworks.com/article/on-writing-less-damn-code/
+  * + * {
+    margin-top: $space-m;
+  }
+}
+
+#root {
+  margin: 0;
+}
+
+.pb-app--fill-height {
+  .pb-app__content {
+    margin: 0;
+
+    @include bp(medium) {
+      min-height: 75vh;
+    }
+  }
+}
+
+.pb-notification {
+  z-index: $z-index-modal-notification;
+}

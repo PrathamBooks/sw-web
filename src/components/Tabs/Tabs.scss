@@ -1,0 +1,37 @@
+@import "../../scss/common";
+
+$block: "pb-tabs";
+
+// .#{$block} {}
+
+.#{$block}__tabs {
+  @include enable-smooth-scroll-on-touch;
+  @include hide-scroll-bar;
+  border-bottom: $border;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.#{$block}__tab-link {
+  border-bottom: $border-width-tab $border-style transparent;
+  display: inline-block;
+  line-height: $height-tab-link - (strip-unit($border-width-tab) / 16);
+  margin: 0;
+  padding: 0 $space-l;
+}
+
+.#{$block}__tab-link--active {
+  border-bottom-color: $c-primary;
+}
+
+.#{$block}--fit-height {
+  height: 100%;
+}
+
+.#{$block}--align-left {
+  .#{$block}__tabs {
+    text-align: left;
+  }
+}

@@ -1,0 +1,74 @@
+@import "../../scss/common";
+
+$block: "pb-profile";
+
+.#{$block} {
+  margin-top: 0;
+}
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(3);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin-top: 0;
+}
+
+.#{$block}__avatar {
+  text-align: center;
+}
+
+.#{$block}__contact {
+  margin-top: $space-l;
+
+  @include bp(medium) {
+    margin-top: $space-m;
+  }
+}
+
+.#{$block}__create-book {
+  text-transform: uppercase;
+}
+
+.#{$block}__summary {
+  @include clearfix;
+}
+
+.#{$block}__summary-col-1,
+.#{$block}__summary-col-2 {
+  @include bp(large) {
+    float: left;
+  }
+}
+
+.#{$block}__summary-col-1 {
+  @include bp(large) {
+    padding-right: $space-m;
+    width: 60%;
+  }
+}
+
+.#{$block}__summary-col-2 {
+  margin-top: $space-l;
+
+  @include bp(large) {
+    margin-top: 0;
+    padding-left: $space-m;
+    width: 40%;
+  }
+}
+
+.#{$block}__section-tabs {
+  @include bp(large) {
+    margin-top: $space-xl;
+  }
+}
+
+.#{$block}__lists--narrow,
+.#{$block}__media-mentions {
+  margin: 0 auto;
+
+  @include bp(large) {
+    max-width: percentage(2 / 3);
+  }
+}

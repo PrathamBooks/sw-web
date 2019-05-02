@@ -1,0 +1,16 @@
+@import "../../scss/common";
+
+.pb-loader-block {
+  @include container;
+  background-color: $c-white;
+  text-align: center;
+}
+
+.pb-loader-block__wrapper {
+  padding: $size-m $space-m;
+
+  @include bp(medium) {
+    padding-bottom: $size-l;
+    padding-top: $size-l;
+  }
+}

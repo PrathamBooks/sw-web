@@ -1,0 +1,10 @@
+@import "../../scss/common";
+
+$block: "pb-menu-divider";
+
+.#{$block} {
+  background-color: $c-border;
+  border: none;
+  height: $border-width;
+  margin: $space-s 0;
+}

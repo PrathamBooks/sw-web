@@ -1,0 +1,40 @@
+@import "../../scss/common";
+
+$block: "pb-quick-view-modal";
+
+// .#{$block} {}
+
+.#{$block}__title {
+  font-family: $font-family-alt;
+  font-size: modular-scale(2);
+  font-weight: $font-weight;
+  line-height: $line-height-heading;
+  margin-top: 0;
+}
+
+.#{$block}__credits {
+  font-size: modular-scale(-1);
+  margin-bottom: $space-l;
+}
+
+.#{$block}__stats {
+  margin: $space-l 0;
+}
+
+.#{$block}__publisher-logo {
+  max-width: $size-xs;
+}
+
+.#{$block}__footer {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.#{$block}__action-icon {
+  min-height: $size-icon-m;
+}
+
+.#{$block}__icon {
+  margin: 0 $space-s 0 0;
+}

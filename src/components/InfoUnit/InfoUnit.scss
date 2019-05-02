@@ -1,0 +1,22 @@
+@import "../../scss/common";
+
+$block: "pb-info-unit";
+
+// .#{$block} {}
+
+.#{$block}__label {
+  font-size: modular-scale(-1);
+}
+
+.#{$block}__label,
+.#{$block}__content {
+  margin-top: 0;
+}
+
+.#{$block}--no-wrap {
+  .#{$block}__label,
+  .#{$block}__content {
+    @include ellipsis;
+    width: 100%;
+  }
+}
